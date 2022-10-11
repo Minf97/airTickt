@@ -1,0 +1,2 @@
+
+d99f63b5431693cffd15eb8d68eaed5c42548aa1	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/tcb-admin-node/download/tcb-admin-node-1.23.0.tgz","integrity":null,"time":1659783353776,"size":"262","metadata":{"time":1659783353775,"url":"https://registry.npm.taobao.org/tcb-admin-node/download/tcb-admin-node-1.23.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Sat, 06 Aug 2022 10:55:53 GMT","location":"https://registry.npmmirror.com/tcb-admin-node/download/tcb-admin-node-1.23.0.tgz"},"options":{"compress":true},"status":301}}

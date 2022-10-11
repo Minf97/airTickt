@@ -1,0 +1,2 @@
+
+069f7b4cf2e60f9e963f301bc3ccc331ccc47db8	{"key":"make-fetch-happen:request-cache:https://registry.nlark.com/wildcard/download/wildcard-2.0.0.tgz","integrity":null,"time":1660147050867,"size":"262","metadata":{"time":1660147050867,"url":"https://registry.nlark.com/wildcard/download/wildcard-2.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Wed, 10 Aug 2022 15:57:30 GMT","location":"https://registry.npmmirror.com/wildcard/download/wildcard-2.0.0.tgz"},"options":{"compress":true},"status":301}}

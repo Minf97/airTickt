@@ -1,0 +1,2 @@
+
+aa81bb8e1efc35870a32fd064889bdde80549f30	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/exit-on-epipe/download/exit-on-epipe-1.0.1.tgz","integrity":null,"time":1661676153655,"size":"262","metadata":{"time":1661676153655,"url":"https://registry.npm.taobao.org/exit-on-epipe/download/exit-on-epipe-1.0.1.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Sun, 28 Aug 2022 08:42:33 GMT","location":"https://registry.npmmirror.com/exit-on-epipe/download/exit-on-epipe-1.0.1.tgz"},"options":{"compress":true},"status":301}}

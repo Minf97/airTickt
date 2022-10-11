@@ -1,0 +1,2 @@
+
+7dfe35c7485a58ec2964aed069030a5b673d78ae	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/private/download/private-0.1.8.tgz","integrity":null,"time":1660147050923,"size":"262","metadata":{"time":1660147050923,"url":"https://registry.npm.taobao.org/private/download/private-0.1.8.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Wed, 10 Aug 2022 15:57:30 GMT","location":"https://registry.npmmirror.com/private/download/private-0.1.8.tgz"},"options":{"compress":true},"status":301}}

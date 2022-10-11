@@ -1,0 +1,2 @@
+
+ccd10ff03add40044af0785e0dc6129694b5aef5	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/babel-traverse/download/babel-traverse-6.26.0.tgz","integrity":null,"time":1660147051022,"size":"262","metadata":{"time":1660147051022,"url":"https://registry.npm.taobao.org/babel-traverse/download/babel-traverse-6.26.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Wed, 10 Aug 2022 15:57:31 GMT","location":"https://registry.npmmirror.com/babel-traverse/download/babel-traverse-6.26.0.tgz"},"options":{"compress":true},"status":301}}
