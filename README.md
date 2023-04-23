@@ -1,92 +1,86 @@
-# airtTcket-front
+# miniprogram-to-uniapp 转换说明
 
-航天门票前端
+## 0x00 转换模式
+根据转换模式，转换后的项目使用相应的工具打开，目前有两种模式：
 
-## Getting started
+### HBuilder X 模式
+转换后的目录(以_uni结尾的目录), 需使用HBuilder X导入，进行运行和调试。
+如果项目使用了npm模块，需先使用npm install等命令进行安装，然后再运行
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Vue-cli 模式
+转换后的目录(以_vue-cli结尾的目录), 需使用命令行安装依赖、运行和打包。
+详见文档：https://uniapp.dcloud.io/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+注：
+上述两种项目类型，可以相互转换。
+[uni-app HBuilderX 工程与 vue-cli 工程相互转换](https://ask.dcloud.net.cn/article/35750)
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 0x01 调试建议
+如果您想转换小程序为uni-app项目，并发布为App，
+建议运行到H5平台，因为H5平台速度快，而且与App平台贴合度更高。
+只有当强依赖硬件时，才使用真机调试，这样可以节约时间！
 
+
+## 0x02 常见问题
+### 1.命令行提示：“npm不是内部或外部命令”
+一般是node未安装在默认目录导致的，参照文章 [解决“npm不是内部或外部命令“](https://www.cnblogs.com/ldq678/p/10291824.html) 解决。
+
+
+### 2.PowerShell里提示：无法加载文件 XXXXXXXXX.ps1，因为在此系统上禁止运行脚本。
+以管理员身份运行`powershell`，执行
 ```
-cd existing_repo
-git remote add origin https://gitlab.biubbmk.cn/weschool/airttcket-front.git
-git branch -M main
-git push -uf origin main
+set-executionpolicy remotesigned
 ```
+输入 y 即可
+或者，在PowerShell输入 `cmd` 后回车也行
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.biubbmk.cn/weschool/airttcket-front/-/settings/integrations)
+### 3.setData为什么没有转换？需要我手动改吗？那我有100多个页面怎么改呀？
+`setData`函数已内置polyfill，所以不用转换，可直接使用`setData`函数！！！
 
-## Collaborate with your team
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 4.命令行报错："cannot read property ‘某某某’ of undefined"
+报错解释：有代码“`xx.某某某`”，但xx的值是undefined，因此，需要进报错的页面，调试高度，为啥xx为undefined，相应的调试代码即可。
+常见原因：可能接口跨域，可能没声明变量等。
 
-## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
+### 5.为什么我运行到H5或app时，拿不到小程序用户的信息？为什么登录失败？
+转换后的uni-app项目，如需运行到其他小程序、H5和App时，登录和支付功能均需“重新对接”，需要增加 “新” 接口！
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
+### 6.跨域问题：为什么我的接口都没有返回数据呀？
+老生常谈，跨域有N种解决办法，最简单的办法是运行到“内置浏览器”。
+PS: 仅仅 H5 平台存在跨域问题！
 
-# Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 7.Vant项目怎么转换呀？
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Vant项目比较常见的报错是：代码`<button class="{{ utils.bem('action-sheet__item', { disabled: item.disabled || item.loading }) }} {{ item.className || '' }}"></button>`转到后，运行会报错，因为uni-app不支持在class里面写函数（PS：可以绕过~^_^）
 
-## Name
-Choose a self-explaining name for your project.
+由于Vant的一些语法uni-app并不支持，因此需要特殊处理一下，这里分享三种方案，可以根据自己的情况进行选择。
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+#### 方案一：【替换Vant组件】
+转换前，将vant组件全部用别的组件库替换掉再转换。
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+#### 方案二：【替换Vant组件】
+转换后，将vant组件使用uview1.x替换掉同功能组件。
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+#### 方案三：【不替换Vant组件】
+转换后，按uniapp引入小程序组件文档重新引入vant组件（小程序自定义组件支持：
+https://uniapp.dcloud.io/tutorial/miniprogram-subject.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E6%94%AF%E6%8C%81）
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### 8.小程序转换为uni-app项目后，还能转换成其他小程序项目吗？
+当然可以，必须可以！
+小程序转换为uni-app项目后，就是uni-app项目了，uni-app项目能做啥就能做啥，
+能再次生成为各种小程序、发布H5和App。
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### 9.uni-app生成的小程序项目，还能再转换回uni-app项目吗？
+不能。不支持这种项目的转换！
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### 其他
+- 因各种原因，本工具并非100%完美转换！有问题实属正常！
+- 如遇运行报错，请添加QQ群(780359397、361784059、603659851任意一群)带图反馈或https://github.com/zhangdaren/miniprogram-to-uniapp提交Issue！
