@@ -124,7 +124,7 @@
 				var local = encodeURIComponent(
 					'http://static-3df7fbd1-8be5-4faa-affb-73c9463c6baa.bspapp.com/#/pages/ucenter/index/index'
 				);
-				let appid = 'wxb316fcad56ffb1ce';
+				let appid = 'wxafc235c48269a55c';
 
 
 				if (code == null || code === '') {

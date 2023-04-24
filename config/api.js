@@ -1,5 +1,6 @@
 // const ApiRootUrl = 'http://127.0.0.1:8360/api/';
-const ApiRootUrl = 'http://81.70.16.7:8360/api/';
+// const ApiRootUrl = 'http://81.70.16.7:8360/api/';
+const ApiRootUrl = 'https://beijing.biubbmk.cn/airshow/api/';
 module.exports = {
 	ApiRootUrl,
 	qiniuyunBackUrl: 'https://qiniuyun.biubbmk.cn/',

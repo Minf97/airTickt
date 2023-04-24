@@ -3,6 +3,6 @@
   "projectname": "nideshop-mini-program",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": true
   }
 }

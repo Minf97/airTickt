@@ -43,7 +43,7 @@ function payOrder(orderId) {
 
 				WeixinJSBridge.invoke(
 					'getBrandWCPayRequest', {
-						appId: 'wxb316fcad56ffb1ce', //公众号名称，由商户传入
+						appId: 'wxafc235c48269a55c', //公众号名称，由商户传入
 						timeStamp: payParam.timeStamp, //时间戳，自1970年以来的秒数
 						nonceStr: payParam.nonceStr, //随机串
 						package: payParam.package,

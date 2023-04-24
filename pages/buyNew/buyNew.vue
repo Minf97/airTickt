@@ -41,7 +41,7 @@
 						<view class="ttp">{{tempItem.guiGeInfo[0].guiGe}}</view>
 						<view class="tttipp">{{goods.goods_desc}}</view>
 					</view>
-					<view class="pricep">￥{{goods.retail_price}}</view>
+					<view class="pricep">￥{{ price || goods.retail_price}}</view>
 				</view>
 				<!-- 购票数量 -->
 				<view class="bb" style="border-bottom: none;">
@@ -171,6 +171,11 @@
 					</view>
 				</view>
 			</view>
+			
+			<view class="detail" style="background-color: #fff;">
+				<!-- <template is="wxParse" :data="wxParseData:goodsDetail.nodes"/> -->
+				<mp-html :content="article_goodsDetail"></mp-html>
+			</view>
 
 			<!-- fix框 -->
 			<view class="fffix" style="z-index: 10;">
@@ -227,7 +232,8 @@
 					// 实物票/电子票
 					ticketType: ""
 				},
-
+				price: '',
+				article_goodsDetail: '',
 				// 联系信息
 				contactInfo: {
 					name: "",
@@ -485,7 +491,8 @@
 					id: that.id
 				}).then(function(res) {
 					if (res.errno === 0) {
-
+that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
+					
 						res.data.info.goods_desc = res.data.info.goods_desc.match(/<p>(.*?)<\/p>/)[1];
 						res.data.productList = res.data.productList.filter(item => item
 							.goods_specification_ids)
@@ -534,8 +541,7 @@
 						}
 
 						//WxParse.wxParse('goodsDetail', 'html', res.data.info.goods_desc, that)
-						that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
-
+						
 						that.getGoodsRelated();
 
 
@@ -626,7 +632,7 @@
 				})
 				this.tempItem = tempItem;
 
-
+			
 
 				that.productList.map(item => {
 					// 将 goods_specification_ids 变成数组
@@ -640,6 +646,13 @@
 					that.specificationList.map(sf => valArr = [...valArr, ...sf.valueList]);
 					console.log(valArr)
 					let obj = {};
+					console.log(233)
+					if (this.isWeekend(new Date())) {
+						that.price = item.weekend_price 
+					}else{
+						that.price = item.retail_price
+					}
+							console.log(that.price, 233)
 					// 对数组遍历寻找到对应的数据
 					idsArr.map(ids => {
 						valArr.map(val => {
@@ -695,6 +708,7 @@
 				})
 
 				let ticketArr1 = [];
+				console.log(that.productListNew)
 				that.productListNew = that.productListNew.map(item => {
 
 					let idsArr = item.goods_specification_ids.split("_");
@@ -758,7 +772,7 @@
 					})
 					return item
 				})
-				
+				console.log(that.productListNew, 2)
 				console.log(ticketArr, "清洗出来的票")
 				that.setData({
 					ticketArr,

@@ -85,6 +85,23 @@
 				</view>
 			</view>
 		</view>
+		<view class="good-grid" v-for="(item, index) in floorGoods" :key="item.id">
+			<view class="h">
+				<view>
+					<text>{{ item.name }}</text>
+				</view>
+			</view>
+		
+			<view class="b">
+				<block v-for="(iitem, iindex) in item.goodsList" :key="iitem.id">
+					<navigator :url="computedUrl(iitem.category_id, iitem.id)" class="item">
+						<image class="img" :src="iitem.list_pic_url" background-size="cover"></image>
+						<view class="name">{{ iitem.name }}</view>
+						<view class="price">￥{{ iitem.retail_price }}</view>
+					</navigator>
+				</block>
+			</view>
+		</view>
 		<view class="a-section a-topic" v-if="'topics.length > 0'">
 			<view class="h">
 				<view>
@@ -108,23 +125,7 @@
 				</scroll-view>
 			</view>
 		</view>
-		<view class="good-grid" v-for="(item, index) in floorGoods" :key="item.id">
-			<view class="h">
-				<view>
-					<text>{{ item.name }}</text>
-				</view>
-			</view>
-
-			<view class="b">
-				<block v-for="(iitem, iindex) in item.goodsList" :key="iitem.id">
-					<navigator :url="computedUrl(iitem.category_id, iitem.id)" class="item">
-						<image class="img" :src="iitem.list_pic_url" background-size="cover"></image>
-						<view class="name">{{ iitem.name }}</view>
-						<view class="price">￥{{ iitem.retail_price }}</view>
-					</navigator>
-				</block>
-			</view>
-		</view>
+	
 	</view>
 </template>
 

@@ -6,6 +6,11 @@
 	align-items: center;
 	padding-bottom: 100px;
 }
+.detail {
+	width: 750rpx;
+	height: auto;
+	overflow: hidden;
+}
 .tt1New {
 	position: relative;
 	display: flex;
@@ -44,6 +49,7 @@
 	right: 6rpx;
 	top: 10rpx;
 	color: #3d9ddb;
+	font-size: 27rpx
 }
 .contentScrollItemTxt1 {
 	position: absolute;
@@ -493,8 +499,6 @@
 	align-items: center;
 	justify-content: space-between;
 }
-
-
 
 /* 自定义内容区样式需自行控制 */
 .fui-custom__wrap {
