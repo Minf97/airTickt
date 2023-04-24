@@ -38,9 +38,13 @@
 				<!-- 日期 -->
 				<view class="pTypeDate">
 					<view class="ddd">日 期</view>
-					<uni-calendar ref="calendar" :selected="ticketTimeArr" :insert="false" @confirm="confirm" />
-					<view class="chooseDate" @click="open"
-						:style="chooseDate == '选择日期' ? '':'background-color: #e4a34d;color:#fff;'">{{chooseDate}}</view>
+					<!-- <uni-calendar ref="calendar" :selected="ticketTimeArr" :insert="false" @confirm="confirm" /> -->
+					<!-- <view class="chooseDate" @click="open"
+						:style="chooseDate == '选择日期' ? '':'background-color: #e4a34d;color:#fff;'">{{chooseDate}}</view> -->
+					
+					<view class="new24" @click="choose(index)" v-for="(item,index) in ticketTimeArr" :style="item.ischoose ? 'background-color: #e4a34d;color:#fff;' : ''">
+						{{item.date}}
+					</view>
 				</view>
 
 				<!-- 单次票/多次票 -->
@@ -132,6 +136,8 @@
 				ticketGuigeIndex: 0,
 				article_goodsDetail: "",
 				chooseDate: "选择日期",
+				
+				ticketTimeArr: [],
 			};
 		},
 		computed: {
@@ -174,54 +180,6 @@
 
 				return ticketTypeArr[ticketTypeIndex] == '实物票' ? shi : dian
 			},
-
-
-			// 当前zp（公众票/普通），当前票种（电子票/实物票），所有的可选日期
-			ticketTimeArr() {
-				const ticketArr = this.ticketArr;
-				const ticketTypeArr = this.ticketTypeArr;
-				const ticketTypeIndex = this.ticketTypeIndex;
-
-				const arr = this.ticketArr.filter(item => {
-					return (item.pz == ticketTypeArr[ticketTypeIndex])
-				})
-
-
-
-				return arr.map(item => {
-					Object.assign(item, {
-						date: item.shiJian,
-						info: "￥" + item.retail_price
-					})
-					return item
-				})
-
-				// let lastArr = [];
-
-				// lastArr = arr.map(item => {
-				// 	return {
-				// 		shiJian: item.shiJian.split("&"),
-				// 		retail_price: item.retail_price
-				// 	}
-				// });
-
-				// // 要放入日历组件的数组
-				// let selectedInfo = [];
-				// for (const i of lastArr) {
-				// 	const timearr = this.handleTime(i.shiJian[0], i.shiJian[1]);
-				// 	const tmpArr = timearr.map(item => {
-				// 		return {
-				// 			date: item,
-				// 			info: "￥" + i.retail_price
-				// 		}
-				// 	})
-				// 	selectedInfo = [...selectedInfo, ...tmpArr];
-				// }
-
-				// return selectedInfo
-
-			},
-
 		},
 		onLoad: function(options) {
 			// 页面初始化 options为页面跳转所带来的参数
@@ -245,6 +203,76 @@
 
 		},
 		methods: {
+			
+			choose(index) {
+				this.ticketTimeArr.forEach((e,idx) => {
+					e["ischoose"] = false;
+					this.$set(this.ticketTimeArr, idx, e)
+				})
+				const item = this.ticketTimeArr[index];
+				item["ischoose"] = !item["ischoose"];
+				// 如果是选中了
+				if(item["ischoose"]) {
+					this.chooseDate = item.date;
+					this.guigeArr = this.getguigeArr()
+				}
+				this.$set(this.ticketTimeArr, index, item)
+			},
+			
+			getTicketTimeArr() {
+				const ticketArr = this.ticketArr;
+				const ticketTypeArr = this.ticketTypeArr;
+				const ticketTypeIndex = this.ticketTypeIndex;
+				
+				const nowTime = Date.now();
+				ticketArr.sort((a,b) => {
+					const diffA = Math.abs(nowTime - new Date(a.shiJian).getTime())
+					const diffB = Math.abs(nowTime - new Date(b.shiJian).getTime())
+					return diffA - diffB
+				})
+				// 取最近时间的九个
+				const reslut = ticketArr.slice(0,9);
+				const arr = reslut.filter(item => {
+					const timeStamp = new Date(item.shiJian).getTime();
+					return (item.pz == ticketTypeArr[ticketTypeIndex])
+				})
+				
+				
+				
+				return arr.map(item => {
+					Object.assign(item, {
+						date: item.shiJian,
+						info: "￥" + item.retail_price
+					})
+					return item
+				})
+				
+			
+				// let lastArr = [];
+			
+				// lastArr = arr.map(item => {
+				// 	return {
+				// 		shiJian: item.shiJian.split("&"),
+				// 		retail_price: item.retail_price
+				// 	}
+				// });
+			
+				// // 要放入日历组件的数组
+				// let selectedInfo = [];
+				// for (const i of lastArr) {
+				// 	const timearr = this.handleTime(i.shiJian[0], i.shiJian[1]);
+				// 	const tmpArr = timearr.map(item => {
+				// 		return {
+				// 			date: item,
+				// 			info: "￥" + i.retail_price
+				// 		}
+				// 	})
+				// 	selectedInfo = [...selectedInfo, ...tmpArr];
+				// }
+			
+				// return selectedInfo
+			
+			},
 			handleTime(a, b) {
 				let start = new Date(a);
 				let end = new Date(b);
@@ -270,7 +298,7 @@
 				this.$refs.calendar.open();
 			},
 			confirm(e) {
-				// console.log(e);
+				console.log(e);
 				this.chooseDate = e.fulldate;
 				this.guigeArr = this.getguigeArr()
 				// this.setData({
@@ -523,6 +551,7 @@
 				that.setData({
 					ticketSort
 				});
+				this.ticketTimeArr = that.getTicketTimeArr();
 			},
 			isWeekend(date) {
 				const dayOfWeek = new Date(date).getDay();

@@ -895,6 +895,15 @@
 	margin-top: 15px;
 	margin-left: 10px;
 	padding-bottom: 10rpx;
+	flex-wrap: wrap;
+}
+
+.new24 {
+	padding: 8px 8px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
 }
 
 .pTypeDate .ddd {

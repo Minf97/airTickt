@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "uni-calendar": "/uni_modules/uni-calendar/components/uni-calendar/uni-calendar",
     "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html"
   }
 }
