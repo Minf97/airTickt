@@ -160,8 +160,8 @@
 		},
 		onShareAppMessage: function() {
 			return {
-				title: 'NideShop',
-				desc: '仿网易严选微信小程序商城',
+				title: 'airshow',
+				desc: 'airshow购票',
 				path: '/pages/index/index'
 			};
 		},

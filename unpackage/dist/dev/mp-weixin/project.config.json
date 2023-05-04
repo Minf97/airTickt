@@ -18,12 +18,12 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.31.0",
-  "appid": "wxf84451020f439de9",
+  "libVersion": "2.30.3",
+  "appid": "wxafc235c48269a55c",
   "projectname": "航空票务",
   "condition": {},
   "editorSetting": {
-    "tabIndent": "auto",
+    "tabIndent": "insertSpaces",
     "tabSize": 2
   }
 }
