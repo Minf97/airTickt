@@ -443,13 +443,13 @@
 					return;
 				}
 				// 判空
-				if (
-					this.isValidPhone ||
-					this.sexVal == '请选择性别'
-				) {
-					util.showErrorToast('没填写完噢');
-					return;
-				}
+				// if (
+				// 	this.isValidPhone ||
+				// 	this.sexVal == '请选择性别'
+				// ) {
+				// 	util.showErrorToast('没填写完噢');
+				// 	return;
+				// }
 				// push进去
 				this.newArrayTourism = {
 					name: this.contactInfo.name,
