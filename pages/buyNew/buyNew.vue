@@ -33,7 +33,8 @@
 			<view class="box">
 				<view class="piaobox">
 					<view class="contentScrollItem" style="width: 100rpx;height: 100rpx;">
-						<div class="contentScrollItemTxt1" style="font-size: 16rpx;">{{tempItem.guiGeInfo[0].guiGe}}</div>
+						<div class="contentScrollItemTxt1" style="font-size: 16rpx;">{{tempItem.guiGeInfo[0].guiGe}}
+						</div>
 						<image src="/static/images/buyNew/ticketImg.png" mode="aspectFit"
 							style="width: 100rpx;height: 100rpx;"></image>
 					</view>
@@ -101,23 +102,23 @@
 					<template #default>
 						<view class="inp">
 							<view class="tit">姓名</view>
-							<input type="text" v-show="isShowDialog" :value="contactInfo.name" @input="onName" placeholder="请输入姓名"
-								placeholder-style="font-size: 14px;">
+							<input type="text" v-show="isShowDialog" :value="contactInfo.name" @input="onName"
+								placeholder="请输入姓名" placeholder-style="font-size: 14px;">
 						</view>
 						<view class="inp" style="border-bottom: 30px;">
 							<view class="tit">电话</view>
-							<input type="number" v-show="isShowDialog" :value="contactInfo.phone" @input="onPhone" @blur="validPhone"
-								placeholder="联系人手机" placeholder-style="font-size: 14px;">
+							<input type="number" v-show="isShowDialog" :value="contactInfo.phone" @input="onPhone"
+								@blur="validPhone" placeholder="联系人手机" placeholder-style="font-size: 14px;">
 						</view>
 
 						<view class="er" v-if="isValidPhone">*电话号码填写错误，请重新填写</view>
 
 						<view class="inp" style="border-bottom: 30px;">
-							<view class="tit">性别</view>
+							<!-- <view class="tit">性别</view>
 							<view class="valInp" @click="popSex">
 								<view class="valval">{{sexVal}}</view>
 								<image src="../../static/static/images/go.png" mode="aspectFit"></image>
-							</view>
+							</view> -->
 							<!-- <van-cell title-style="text-align:left;" style="width: 100%;" title="性别" is-link value="请选择性别" @click="popSex" /> -->
 						</view>
 					</template>
@@ -128,8 +129,8 @@
 				<!-- <view class="fui-custom__wrap">
 					
 				</view> -->
-				<van-picker :columns="pickerColumn" @confirm="onConfirmPicker" @cancel="onCancelPicker"
-					:show-toolbar="true"></van-picker>
+				<!-- 		<van-picker :columns="pickerColumn" @confirm="onConfirmPicker" @cancel="onCancelPicker"
+					:show-toolbar="true"></van-picker> -->
 			</fui-bottom-popup>
 
 			<!-- 入园须知 -->
@@ -171,7 +172,7 @@
 					</view>
 				</view>
 			</view>
-			
+
 			<view class="detail" style="background-color: #fff;">
 				<!-- <template is="wxParse" :data="wxParseData:goodsDetail.nodes"/> -->
 				<mp-html :content="article_goodsDetail"></mp-html>
@@ -220,7 +221,14 @@
 				// tagShow: false,
 				isShowDialog: false,
 				contentDialog: '',
-
+				productListNew: [{
+					guiGeInfo: [{		guiGe: ''}],
+				}],
+				tempItem: {
+					guiGeInfo: [{
+						guiGe: '',
+					}]
+				},
 				// 要购买的票信息
 				ticketInfo: {
 					// 成人票/儿童票等等
@@ -369,13 +377,13 @@
 				const id = this.id;
 				this.reLoad(id, product.id)
 			},
-			reLoad(id,itemId) {
+			reLoad(id, itemId) {
 				this.setData({
 					itemId: itemId,
 				});
 				this.chooseDate = "请选择日期";
 				this.ticketCount = 1;
-				
+
 				var that = this;
 				this.getGoodsInfo();
 				util.request(api.CartGoodsCount).then(function(res) {
@@ -491,8 +499,8 @@
 					id: that.id
 				}).then(function(res) {
 					if (res.errno === 0) {
-that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
-					
+						that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
+
 						res.data.info.goods_desc = res.data.info.goods_desc.match(/<p>(.*?)<\/p>/)[1];
 						res.data.productList = res.data.productList.filter(item => item
 							.goods_specification_ids)
@@ -516,7 +524,7 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 							tempItem = res.data.productList.filter(item => {
 								return item.id == that?.itemId
 							})
-							if(tempItem.length > 0) tempItem = tempItem[0]
+							if (tempItem.length > 0) tempItem = tempItem[0]
 						} else {
 							tempItem = that.productList[0]
 						}
@@ -541,7 +549,7 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 						}
 
 						//WxParse.wxParse('goodsDetail', 'html', res.data.info.goods_desc, that)
-						
+
 						that.getGoodsRelated();
 
 
@@ -575,12 +583,12 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 			initTicketArr() {
 				let that = this;
 				let ticketArr = [];
-				
+
 				let tempItem = this.tempItem;
 				let idsArr = tempItem.goods_specification_ids.split("_");
 				let valArr = [];
 				tempItem["guiGeInfo"] = []
-				
+
 				that.specificationList.map(sf => valArr = [...valArr, ...sf.valueList]);
 				let obj = {};
 				// 对数组遍历寻找到对应的数据
@@ -590,12 +598,12 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 							if (val.name == "规格") {
 								obj["guiGe"] = val.value;
 							}
-				
+
 							if (val.name == "日期" || val.name == "时间") {
 								obj["shiJian"] = val.value;
 							}
 						}
-				
+
 						if (
 							obj["guiGe"] &&
 							obj["shiJian"]
@@ -632,7 +640,7 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 				})
 				this.tempItem = tempItem;
 
-			
+
 
 				that.productList.map(item => {
 					// 将 goods_specification_ids 变成数组
@@ -648,11 +656,11 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 					let obj = {};
 					console.log(233)
 					if (this.isWeekend(new Date())) {
-						that.price = item.weekend_price 
-					}else{
+						that.price = item.weekend_price
+					} else {
 						that.price = item.retail_price
 					}
-							console.log(that.price, 233)
+					console.log(that.price, 233)
 					// 对数组遍历寻找到对应的数据
 					idsArr.map(ids => {
 						valArr.map(val => {
@@ -708,7 +716,7 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 				})
 
 				let ticketArr1 = [];
-				console.log(that.productListNew)
+				// console.log(that.productListNew)
 				that.productListNew = that.productListNew.map(item => {
 
 					let idsArr = item.goods_specification_ids.split("_");
@@ -1015,7 +1023,9 @@ that.article_goodsDetail = that.escape2Html(res.data.info.goods_desc);
 						category_id: ticket.category_id,
 						// 是否周末  true: false
 						isWeekend: ticket.isWeekend,
-						certification: JSON.stringify([{choosetime: this.chooseDate}])
+						certification: JSON.stringify([{
+							choosetime: this.chooseDate
+						}])
 					},
 					'POST'
 				).then(res => {

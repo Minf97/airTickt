@@ -50,6 +50,7 @@
 	writing-mode:vertical-rl;
 	right: 6rpx;
 	top: 10rpx;
+	z-index: 2;
 	color: #3d9ddb;
 	font-size: 27rpx
 }

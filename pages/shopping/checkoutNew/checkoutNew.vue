@@ -27,7 +27,7 @@
 			<view style="width: 100%; height: 10px;"></view>
 			<view class="bb" style="border-bottom: none;">
 				<view class="tt1">
-					<image src="../../static/images/buy/shenfenzheng.png"></image>
+					<image src="/static/images/buy/shenfenzheng.png"></image>
 					<view>证件信息</view>
 					<!-- <view class="val" style="color: #ccc;">
 						暂不填写-稍后提供

@@ -9,10 +9,7 @@
 			"path": "pages/buyNew/buyNew",
 			"style": {
 				"usingComponents": {
-					"van-button": "/wxcomponents/vant/dist/button/index",
-					"van-cell": "/wxcomponents/vant/dist/cell/index",
-					"van-cell-group": "/wxcomponents/vant/dist/cell-group/index",
-					"van-picker":"/wxcomponents/vant/dist/picker/index"
+	
 				}
 			}
 		},

@@ -12,9 +12,9 @@
 			if (iswx && !uni.getStorageSync('token')) {
 				var code = this.getUrlParam('code'); // 截取路径中的code，如果没有就去微信授权，如果已经获取到了就直接传code给后台获取openId
 				var local = encodeURIComponent(
-					'http://static-3df7fbd1-8be5-4faa-affb-73c9463c6baa.bspapp.com/#/pages/ucenter/index/index'
+					'https://static-mp-81d04c4e-5e21-4d71-9c75-68782e3aaed9.next.bspapp.com/#/pages/ucenter/index/index'
 				);
-				let appid = 'wxafc235c48269a55c';
+				let appid = 'wxb316fcad56ffb1ce';
 
 
 				if (code == null || code === '') {
@@ -131,7 +131,7 @@
 	};
 </script>
 <style>
-	@import "/wxcomponents/vant/dist/common/index.wxss";
+	/* @import "/wxcomponents/vant/dist/common/index.wxss"; */
 	/**app.wxss**/
 	.container {
 		box-sizing: border-box;

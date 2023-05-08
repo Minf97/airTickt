@@ -480,7 +480,7 @@
 
 						// 获取七牛token
 						let uptoken = '';
-						util.request('http://81.70.16.7:8360/api/user/uptoken').then(response => {
+						util.request('https://beijing.biubbmk.cn/airshow/api/user/uptoken').then(response => {
 							// console.log(res)
 							uptoken = response.uptoken;
 
