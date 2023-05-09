@@ -1,0 +1,1 @@
+<fui-form-field vue-id="5f5a8b26-1" name="{{name}}" value="{{vals}}" class="data-v-c945048e" bind:__l="__l" vue-slots="{{['default']}}"><slot></slot></fui-form-field>
