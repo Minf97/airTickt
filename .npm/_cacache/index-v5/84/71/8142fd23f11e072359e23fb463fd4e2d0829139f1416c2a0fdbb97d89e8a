@@ -1,0 +1,2 @@
+
+00fdc6b97646fb69e9716f2176d9e72281675c26	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/source-map/download/source-map-0.7.3.tgz","integrity":null,"time":1660147051474,"size":"262","metadata":{"time":1660147051474,"url":"https://registry.npm.taobao.org/source-map/download/source-map-0.7.3.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Wed, 10 Aug 2022 15:57:31 GMT","location":"https://registry.npmmirror.com/source-map/download/source-map-0.7.3.tgz"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+a53fc611cecb7ac99757665d9a721e07408e8bd0	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/word/download/word-0.3.0.tgz","integrity":null,"time":1661676153585,"size":"262","metadata":{"time":1661676153585,"url":"https://registry.npm.taobao.org/word/download/word-0.3.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Sun, 28 Aug 2022 08:42:33 GMT","location":"https://registry.npmmirror.com/word/download/word-0.3.0.tgz"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+60e501b9550893775065c7983a4d96736b7616d6	{"key":"make-fetch-happen:request-cache:https://registry.npm.taobao.org/delayed-stream/download/delayed-stream-1.0.0.tgz","integrity":null,"time":1659783355158,"size":"262","metadata":{"time":1659783355158,"url":"https://registry.npm.taobao.org/delayed-stream/download/delayed-stream-1.0.0.tgz","reqHeaders":{},"resHeaders":{"content-type":"text/html","date":"Sat, 06 Aug 2022 10:55:55 GMT","location":"https://registry.npmmirror.com/delayed-stream/download/delayed-stream-1.0.0.tgz"},"options":{"compress":true},"status":301}}
