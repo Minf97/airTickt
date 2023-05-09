@@ -14,7 +14,7 @@
 				var local = encodeURIComponent(
 					'https://static-mp-81d04c4e-5e21-4d71-9c75-68782e3aaed9.next.bspapp.com/#/pages/ucenter/index/index'
 				);
-				let appid = 'wxb316fcad56ffb1ce';
+				let appid = 'wx7fe2ba6679e645d2';
 
 
 				if (code == null || code === '') {
