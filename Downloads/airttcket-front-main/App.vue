@@ -27,26 +27,26 @@
 			}
 
 			// 添加全局路由守卫
-			if (!iswx) {
-				uni.addInterceptor('navigateTo', {
-					invoke: (args) => {
-						// wx.showModal({
-						// 	title: "请在微信中打开~",
-						// })
-						console.log(111);
-						if (args.url != "/pages/guidance/guidance") {
-							console.log("ddd");
-							uni.navigateTo({
-								url: "/pages/guidance/guidance"
-							})
-							return false
-						} else {
-							return true
-						}
-						console.log(args);
-					},
-				})
-			}
+			// if (!iswx) {
+			// 	uni.addInterceptor('navigateTo', {
+			// 		invoke: (args) => {
+			// 			// wx.showModal({
+			// 			// 	title: "请在微信中打开~",
+			// 			// })
+			// 			console.log(111);
+			// 			if (args.url != "/pages/guidance/guidance") {
+			// 				console.log("ddd");
+			// 				uni.navigateTo({
+			// 					url: "/pages/guidance/guidance"
+			// 				})
+			// 				return false
+			// 			} else {
+			// 				return true
+			// 			}
+			// 			console.log(args);
+			// 		},
+			// 	})
+			// }
 			/*#endif*/
 
 			/*#ifdef MP*/

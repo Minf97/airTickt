@@ -1,2 +1,1237 @@
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/buy/buy"],{198:function(t,e,n){"use strict";(function(t){n(5);r(n(4));var e=r(n(199));function r(t){return t&&t.__esModule?t:{default:t}}wx.__webpack_require_UNI_MP_PLUGIN__=n,t(e.default)}).call(this,n(1)["createPage"])},199:function(t,e,n){"use strict";n.r(e);var r=n(200),o=n(202);for(var i in o)["default"].indexOf(i)<0&&function(t){n.d(e,t,(function(){return o[t]}))}(i);n(207);var a,c=n(13),u=Object(c["default"])(o["default"],r["render"],r["staticRenderFns"],!1,null,null,null,!1,r["components"],a);u.options.__file="pages/buy/buy.vue",e["default"]=u.exports},200:function(t,e,n){"use strict";n.r(e);var r=n(201);n.d(e,"render",(function(){return r["render"]})),n.d(e,"staticRenderFns",(function(){return r["staticRenderFns"]})),n.d(e,"recyclableRender",(function(){return r["recyclableRender"]})),n.d(e,"components",(function(){return r["components"]}))},201:function(t,e,n){"use strict";var r;n.r(e),n.d(e,"render",(function(){return o})),n.d(e,"staticRenderFns",(function(){return a})),n.d(e,"recyclableRender",(function(){return i})),n.d(e,"components",(function(){return r}));var o=function(){var t=this,e=t.$createElement,n=(t._self._c,t.__map(t.certificationInfo,(function(e,n){var r=t.__get_orig(e),o=t.indexToNumber(n),i=t.indexToNumber(n);return{$orig:r,m0:o,m1:i}}))),r=t.imageUrl(t.isNeedTicket);t.$mp.data=Object.assign({},{$root:{l0:n,m2:r}})},i=!1,a=[];o._withStripped=!0},202:function(t,e,n){"use strict";n.r(e);var r=n(203),o=n.n(r);for(var i in r)["default"].indexOf(i)<0&&function(t){n.d(e,t,(function(){return r[t]}))}(i);e["default"]=o.a},203:function(t,e,n){"use strict";(function(t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r=a(n(9)),o=a(n(10)),i=a(n(32));a(n(204));function a(t){return t&&t.__esModule?t:{default:t}}function c(){/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */c=function(){return t};var t={},e=Object.prototype,n=e.hasOwnProperty,r="function"==typeof Symbol?Symbol:{},o=r.iterator||"@@iterator",i=r.asyncIterator||"@@asyncIterator",a=r.toStringTag||"@@toStringTag";function u(t,e,n){return Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{u({},"")}catch(L){u=function(t,e,n){return t[e]=n}}function s(t,e,n,r){var o=e&&e.prototype instanceof d?e:d,i=Object.create(o.prototype),a=new T(r||[]);return i._invoke=function(t,e,n){var r="suspendedStart";return function(o,i){if("executing"===r)throw new Error("Generator is already running");if("completed"===r){if("throw"===o)throw i;return S()}for(n.method=o,n.arg=i;;){var a=n.delegate;if(a){var c=k(a,n);if(c){if(c===l)continue;return c}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if("suspendedStart"===r)throw r="completed",n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);r="executing";var u=f(t,e,n);if("normal"===u.type){if(r=n.done?"completed":"suspendedYield",u.arg===l)continue;return{value:u.arg,done:n.done}}"throw"===u.type&&(r="completed",n.method="throw",n.arg=u.arg)}}}(t,n,a),i}function f(t,e,n){try{return{type:"normal",arg:t.call(e,n)}}catch(L){return{type:"throw",arg:L}}}t.wrap=s;var l={};function d(){}function h(){}function p(){}var g={};u(g,o,(function(){return this}));var v=Object.getPrototypeOf,m=v&&v(v(_([])));m&&m!==e&&n.call(m,o)&&(g=m);var y=p.prototype=d.prototype=Object.create(g);function w(t){["next","throw","return"].forEach((function(e){u(t,e,(function(t){return this._invoke(e,t)}))}))}function I(t,e){function r(o,i,a,c){var u=f(t[o],t,i);if("throw"!==u.type){var s=u.arg,l=s.value;return l&&"object"==typeof l&&n.call(l,"__await")?e.resolve(l.__await).then((function(t){r("next",t,a,c)}),(function(t){r("throw",t,a,c)})):e.resolve(l).then((function(t){s.value=t,a(s)}),(function(t){return r("throw",t,a,c)}))}c(u.arg)}var o;this._invoke=function(t,n){function i(){return new e((function(e,o){r(t,n,e,o)}))}return o=o?o.then(i,i):i()}}function k(t,e){var n=t.iterator[e.method];if(void 0===n){if(e.delegate=null,"throw"===e.method){if(t.iterator.return&&(e.method="return",e.arg=void 0,k(t,e),"throw"===e.method))return l;e.method="throw",e.arg=new TypeError("The iterator does not provide a 'throw' method")}return l}var r=f(n,t.iterator,e.arg);if("throw"===r.type)return e.method="throw",e.arg=r.arg,e.delegate=null,l;var o=r.arg;return o?o.done?(e[t.resultName]=o.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,l):o:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,l)}function b(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function x(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function T(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(b,this),this.reset(!0)}function _(t){if(t){var e=t[o];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,i=function e(){for(;++r<t.length;)if(n.call(t,r))return e.value=t[r],e.done=!1,e;return e.value=void 0,e.done=!0,e};return i.next=i}}return{next:S}}function S(){return{value:void 0,done:!0}}return h.prototype=p,u(y,"constructor",p),u(p,"constructor",h),h.displayName=u(p,a,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===h||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,p):(t.__proto__=p,u(t,a,"GeneratorFunction")),t.prototype=Object.create(y),t},t.awrap=function(t){return{__await:t}},w(I.prototype),u(I.prototype,i,(function(){return this})),t.AsyncIterator=I,t.async=function(e,n,r,o,i){void 0===i&&(i=Promise);var a=new I(s(e,n,r,o),i);return t.isGeneratorFunction(n)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},w(y),u(y,a,"Generator"),u(y,o,(function(){return this})),u(y,"toString",(function(){return"[object Generator]"})),t.keys=function(t){var e=[];for(var n in t)e.push(n);return e.reverse(),function n(){for(;e.length;){var r=e.pop();if(r in t)return n.value=r,n.done=!1,n}return n.done=!0,n}},t.values=_,T.prototype={constructor:T,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(x),!t)for(var e in this)"t"===e.charAt(0)&&n.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function r(n,r){return a.type="throw",a.arg=t,e.next=n,r&&(e.method="next",e.arg=void 0),!!r}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return r("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return r(i.catchLoc,!0);if(this.prev<i.finallyLoc)return r(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return r(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return r(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var o=this.tryEntries[r];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=e&&e<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=e,i?(this.method="next",this.next=i.finallyLoc,l):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),l},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.finallyLoc===t)return this.complete(n.completion,n.afterLoc),x(n),l}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.tryLoc===t){var r=n.completion;if("throw"===r.type){var o=r.arg;x(n)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,n){return this.delegate={iterator:_(t),resultName:e,nextLoc:n},"next"===this.method&&(this.arg=void 0),l}},t}function u(t,e,n,r,o,i,a){try{var c=t[i](a),u=c.value}catch(s){return void n(s)}c.done?e(u):Promise.resolve(u).then(r,o)}function s(t){return function(){var e=this,n=arguments;return new Promise((function(r,o){var i=t.apply(e,n);function a(t){u(i,r,o,a,c,"next",t)}function c(t){u(i,r,o,a,c,"throw",t)}a(void 0)}))}}function f(t,e){return g(t)||p(t,e)||d(t,e)||l()}function l(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function d(t,e){if(t){if("string"===typeof t)return h(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?h(t,e):void 0}}function h(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function p(t,e){var n=null==t?null:"undefined"!==typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=n){var r,o,i=[],a=!0,c=!1;try{for(n=n.call(t);!(a=(r=n.next()).done);a=!0)if(i.push(r.value),e&&i.length===e)break}catch(u){c=!0,o=u}finally{try{a||null==n["return"]||n["return"]()}finally{if(c)throw o}}return i}}function g(t){if(Array.isArray(t))return t}var v={components:{},data:function(){return{ticketInfo:{guigeArr:[],ticketTime:"",zp:"",ticketType:""},contactInfo:{name:"",phone:""},isValidPhone:!1,isValidArr:[],isValidTax:!1,checkedAddress:{id:0,name:"",is_default:0,mobile:"",full_region:"",address:""},addressId:0,couponId:0,invoices:{type:"",name:"",tax_number:""},isNeedCertification:0,isNeedTicket:!1,openAttr:!1,cartGoods:[],isShowXY:!1,isJieShow:!1}},onLoad:function(e){var n=e.id,r=e.category_id,o=t.getStorageSync("buyItem");this.ticketInfo=JSON.parse(o),this.getIsValidArr(),this.setData({id:n,category_id:r}),console.log(n,r)},onShow:function(){var e=t.getStorageSync("addressId");e&&this.setData({addressId:e});var n=t.getStorageSync("couponId");n&&this.setData({couponId:n}),this.getCheckoutInfo()},computed:{certificationInfo:function(){var t=this.ticketInfo.guigeArr,e=[];return t.forEach((function(t){if(t.chooseCount>0&&t.goods_number>0)for(var n=t.chooseCount;n>0;n--)e.push(t)})),e.map((function(t){return{ticketTime:t.ticketTime,guiGe:t.guiGe,name:"",card:"",cardImgFront:"",cardImgBehind:"",cardImgElectron:""}}))},totalMoney:function(){var t=0;return this.ticketInfo.guigeArr.forEach((function(e){t+=e.retail_price*e.chooseCount})),t}},methods:{indexToNumber:function(t){switch(t+1){case 1:return"①";case 2:return"②";case 3:return"③";case 4:return"④";case 5:return"⑤";case 6:return"⑥";case 7:return"⑦";case 8:return"⑧";case 9:return"⑨";case 10:return"⑩";default:return t}},onCardImgElectron:function(e){var n=this.certificationInfo[e];t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["album","camera"],success:function(e){var o=e.tempFilePaths;n.cardImgElectron=o,t.showLoading({title:"正在上传...",mask:!0});var i="";r.default.request("https://beijing.biubbmk.cn/airshow/api/user/uptoken").then((function(n){i=n.uptoken;var r=e.tempFilePaths[0],o=(new Date).getTime();t.uploadFile({url:"https://up-z2.qiniup.com",filePath:r,name:"file",method:"POST",formData:{key:o,token:i},success:function(e){var n=JSON.parse(e.data),r="http://rnwwnc95c.hn-bkt.clouddn.com/"+n.key;console.log(r),t.hideLoading()},fail:function(e){t.showToast({title:"网络错误",icon:"none"}),console.log(e),t.hideLoading()}})}))}})},previewCardImgElectron:function(e){var n=this.certificationInfo[e];t.previewImage({current:1,urls:n.cardImgElectron,success:function(t){console.log(t)},fail:function(t){console.log(t)}})},previewCardImgFront:function(e){var n=this.certificationInfo[e];t.previewImage({current:1,urls:n.cardImgFront,success:function(t){console.log(t)},fail:function(t){console.log(t)}})},onCardImgFront:function(e){var n=this.certificationInfo[e];t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["album","camera"],success:function(e){var i=e.tempFilePaths;n.cardImgFront=i,t.showLoading({title:"正在上传...",mask:!0});var a="";r.default.request(o.default.uploadImg).then((function(n){a=n.uptoken;var r=e.tempFilePaths[0],i=(new Date).getTime();t.uploadFile({url:o.default.qiniuyunUrl,filePath:r,name:"file",method:"POST",formData:{key:i,token:a},success:function(e){var n=JSON.parse(e.data),r=o.default.qiniuyunBackUrl+n.key;console.log(r),t.hideLoading()},fail:function(e){t.showToast({title:"网络错误",icon:"none"}),console.log(e),t.hideLoading()}})}))}})},previewCardImgBehind:function(e){var n=this.certificationInfo[e];t.previewImage({urls:n.CardImgBehind})},onCardImgBehind:function(e){var n=this.certificationInfo[e];t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["album","camera"],success:function(e){var i=e.tempFilePaths;n.cardImgBehind=i,t.showLoading({title:"正在上传...",mask:!0});var a="";r.default.request(o.default.uploadImg).then((function(r){a=r.uptoken;var i=e.tempFilePaths[0],c=(new Date).getTime();t.uploadFile({url:o.default.qiniuyunUrl,filePath:i,name:"file",method:"POST",formData:{key:c,token:a},success:function(e){var r=JSON.parse(e.data),i=o.default.qiniuyunBackUrl+r.key;console.log(i),console.log(n.cardImgBehind),t.hideLoading()},fail:function(e){t.showToast({title:"网络错误",icon:"none"}),console.log(e),t.hideLoading()}})}))}})},onTypeInvoices:function(t){var e=t.detail.value;this.invoices.type=e},onNameInvoices:function(t){var e=t.detail.value;this.invoices.name=e},onTaxInvoices:function(t){var e=t.detail.value;this.invoices.tax_number=e},validTax_Invoices:function(){var t=this.invoices.tax_number;this.isValidTax=!r.default.checkTax(t)},getCheckoutInfo:function(){var e=this;console.log(e.addressId,e.couponId),r.default.request(o.default.CartCheckout,{addressId:e.addressId,couponId:e.couponId}).then((function(n){0===n.errno&&(console.log(n.data),e.setData({checkedAddress:n.data.checkedAddress})),t.hideLoading()}))},selectAddress:function(){t.navigateTo({url:"/pages/shopping/address/address"})},addAddress:function(){t.navigateTo({url:"/pages/shopping/addressAdd/addressAdd"})},getIsValidArr:function(){this.isValidArr=this.certificationInfo.map((function(t){return!1}))},validCard:function(t){var e=this.certificationInfo[t].card,n=/^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/;n.test(e)||this.$set(this.isValidArr,t,!0),n.test(e)&&this.$set(this.isValidArr,t,!1)},validPhone:function(){var t=this.contactInfo.phone;this.isValidPhone=!/^1[3|4|5|6|7|8|9][0-9]\d{8}$/.test(t)},onName:function(t){var e=t.detail.value;this.contactInfo.name=e},onPhone:function(t){var e=t.detail.value;this.contactInfo.phone=e},onCertiName:function(t){var e=t.detail.value,n=t.currentTarget.dataset.i;this.certificationInfo[n].name=e},onCertiCard:function(t){var e=t.detail.value,n=t.currentTarget.dataset.i;this.certificationInfo[n].card=e},onAdress:function(t){var e=t.detail.value;this.adressInfo.adress=e},onJieShow:function(t){var e=f(t.detail.value,1),n=e[0];this.isJieShow="false"==n,console.log(this.isJieShow)},needCertification:function(){this.isNeedCertification=!this.isNeedCertification},needTicket:function(){this.isNeedTicket=!this.isNeedTicket},imageUrl:function(t){return t?"/static/images/buy/dui-2.png":"/static/images/buy/dui.png"},showPopup:function(){this.isShowXY=!0},closePopup:function(){this.isShowXY=!1},buy:function(){var e=this;return s(c().mark((function n(){var o,i,a;return c().wrap((function(n){while(1)switch(n.prev=n.next){case 0:if(t.showLoading(),e.isCheckedAllSpec()){n.next=3;break}return n.abrupt("return");case 3:return n.prev=3,n.next=6,e.productDlete();case 6:return n.next=8,e.goodsClear();case 8:o=e.ticketInfo.guigeArr,i=e.isWeekend(e.ticketInfo.choosetime),o=o.filter((function(t){return t.chooseCount})),a=0;case 12:if(!(a<o.length)){n.next=18;break}return n.next=15,e.addToCart(o[a],a,i);case 15:a++,n.next=12;break;case 18:e.submitOrder(),n.next=24;break;case 21:n.prev=21,n.t0=n["catch"](3),r.default.showErrorToast(n.t0.errMsg);case 24:case"end":return n.stop()}}),n,null,[[3,21]])})))()},isWeekend:function(t){var e=new Date(t).getDay();return 6===e||0===e},isCheckedAllSpec:function(){var e=this.isValidPhone,n=this.isValidArr,r=this.certificationInfo.map((function(t){return t.card})),o=this.certificationInfo.map((function(t){return t.cardImgFront})),i=this.certificationInfo.map((function(t){return t.cardImgBehind})),a=this.certificationInfo.map((function(t){return t.cardImgElectron})),c=this.contactInfo.phone,u=this.isJieShow,s=this.ticketInfo;return 1==e||-1!=n.indexOf(!0)||r.filter((function(t){return 0==t.length})).length>0||0==c.length||"专业日"==s.zp&&(o.filter((function(t){return 0==t.length})).length>0||i.filter((function(t){return 0==t.length})).length>0||a.filter((function(t){return 0==t.length})).length>0)?(t.showToast({image:"/static/static/images/icon_error.png",title:"请填写完整",mask:!0}),!1):(console.log(u),0!=u||(t.showToast({image:"/static/static/images/icon_error.png",title:"请勾选协议",mask:!0}),!1))},addToCart:function(e,n,i){var a=this;return s(c().mark((function u(){return c().wrap((function(c){while(1)switch(c.prev=c.next){case 0:return a.certificationInfo[n]["choosetime"]=a.ticketInfo.choosetime,console.log(a.certificationInfo[n]),c.next=4,r.default.request(o.default.CartAdd,{goodsId:a.id,number:e.chooseCount,productId:e.id,category_id:a.category_id,certification:JSON.stringify([a.certificationInfo[n]]),isWeekend:i},"POST").then((function(e){var n=e;0==n.errno||t.showToast({image:"/static/static/images/icon_error.png",title:n.errmsg,mask:!0})}));case 4:case"end":return c.stop()}}),u)})))()},goodsClear:function(){return s(c().mark((function t(){return c().wrap((function(t){while(1)switch(t.prev=t.next){case 0:return t.next=2,r.default.request(o.default.goodsClear,{},"GET");case 2:case"end":return t.stop()}}),t)})))()},productDlete:function(){var t=this;return s(c().mark((function e(){return c().wrap((function(e){while(1)switch(e.prev=e.next){case 0:return e.next=2,r.default.request(o.default.productDlete,{goods_id:t.id},"POST");case 2:case"end":return e.stop()}}),e)})))()},submitOrder:function(){r.default.request(o.default.OrderSubmit,{addressId:this.addressId,couponId:this.couponId,category_id:this.category_id,isNoNeedAddress:"电子票"==this.ticketInfo.ticketType,name:this.contactInfo.name,phone:this.contactInfo.phone,isNeedTicket:this.isNeedTicket,invoices:JSON.stringify(this.invoices)},"POST").then((function(e){if(0===e.errno){var n=e.data.orderInfo.id;i.default.payOrder(parseInt(n)).then((function(e){t.redirectTo({url:"/pages/payResult/payResult?status=1&orderId="+n})})).catch((function(e){t.redirectTo({url:"/pages/payResult/payResult?status=0&orderId="+n})}))}else r.default.showErrorToast("下单失败")})).catch((function(t){r.default.showErrorToast("下单失败")}))}}};e.default=v}).call(this,n(1)["default"])},207:function(t,e,n){"use strict";n.r(e);var r=n(208),o=n.n(r);for(var i in r)["default"].indexOf(i)<0&&function(t){n.d(e,t,(function(){return r[t]}))}(i);e["default"]=o.a},208:function(t,e,n){}},[[198,"common/runtime","common/vendor"]]]);
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/buy/buy"],{
+
+/***/ 209:
+/*!******************************************************************************************!*\
+  !*** /Users/macbook/Downloads/airttcket-front-main/main.js?{"page":"pages%2Fbuy%2Fbuy"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 5);
+
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 4));
+var _buy = _interopRequireDefault(__webpack_require__(/*! ./pages/buy/buy.vue */ 210));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // @ts-ignore
+wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;createPage(_buy.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
+/***/ }),
+
+/***/ 210:
+/*!***********************************************************************!*\
+  !*** /Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buy.vue?vue&type=template&id=63838ed8& */ 211);
+/* harmony import */ var _buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buy.vue?vue&type=script&lang=js& */ 213);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buy.vue?vue&type=style&index=0&lang=css& */ 218);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 13);
+
+var renderjs
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null,
+  false,
+  _buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["components"],
+  renderjs
+)
+
+component.options.__file = "pages/buy/buy.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ 211:
+/*!******************************************************************************************************!*\
+  !*** /Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=template&id=63838ed8& ***!
+  \******************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./buy.vue?vue&type=template&id=63838ed8& */ 212);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_16_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_template_id_63838ed8___WEBPACK_IMPORTED_MODULE_0__["components"]; });
+
+
+
+/***/ }),
+
+/***/ 212:
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=template&id=63838ed8& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
+var components
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.certificationInfo, function(item, index) {
+    var $orig = _vm.__get_orig(item)
+
+    var m0 = _vm.indexToNumber(index)
+    var m1 = _vm.indexToNumber(index)
+    return {
+      $orig: $orig,
+      m0: m0,
+      m1: m1
+    }
+  })
+
+  var m2 = _vm.imageUrl(_vm.isNeedTicket)
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+        m2: m2
+      }
+    }
+  )
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ 213:
+/*!************************************************************************************************!*\
+  !*** /Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./buy.vue?vue&type=script&lang=js& */ 214);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ 214:
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 40));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _util = _interopRequireDefault(__webpack_require__(/*! ../../utils/util.js */ 9));
+var _api = _interopRequireDefault(__webpack_require__(/*! ../../config/api.js */ 10));
+var _pay = _interopRequireDefault(__webpack_require__(/*! ../../services/pay.js */ 43));
+
+var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./uploadImg.js */ 215));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+// import qiniu from 'qiniu'
+var _default =
+
+{
+  components: {
+    // fuiBottomPopup,
+  },
+
+  data: function data() {
+    return {
+      // options: ['最新车讯', '降价排行', 'SUV', '违章罚单', '提车试驾', '测评体验', '选车指南', '美女车模', '加油优惠卡', '维修保养'],
+      // tag: '请选择',
+      // tagShow: false,
+
+      // 要购买的票信息
+      ticketInfo: {
+        // 成人票/儿童票等等
+        guigeArr: [],
+        // 时间 YY-MM-DD
+        ticketTime: "",
+        // 专业票/公众日
+        zp: "",
+        // 实物票/电子票
+        ticketType: "" },
+
+
+      // 联系信息
+      contactInfo: {
+        name: "",
+        phone: '' },
+
+      isValidPhone: false,
+
+      isValidArr: [],
+      isValidTax: false,
+
+      // 邮寄地址
+      checkedAddress: {
+        id: 0,
+        name: '',
+        is_default: 0,
+        mobile: '',
+        full_region: '',
+        address: '' },
+
+      addressId: 0,
+      couponId: 0,
+
+      // 发票
+      invoices: {
+        type: "",
+        name: "",
+        tax_number: "" },
+
+      certificationInfo: [],
+
+      // 
+      isNeedCertification: 0,
+      isNeedTicket: false,
+      // 组件标志位
+      openAttr: false,
+      // 购物车列表
+      cartGoods: [],
+
+      // 是否展示弹窗
+      isShowXY: false,
+      // 是否接受协议
+      isJieShow: false };
+
+  },
+  onLoad: function onLoad(options) {var
+
+    id =
+
+    options.id,category_id = options.category_id;
+
+    var ticketInfo = uni.getStorageSync('buyItem');
+    this.ticketInfo = JSON.parse(ticketInfo);
+    this.getIsValidArr();
+    this.setData({
+      id: id,
+      category_id: category_id });
+
+    console.log(id, category_id);
+
+    // try {
+    // 	var addressId = uni.getStorageSync('addressId');
+
+    // 	if (addressId) {
+    // 		this.setData({
+    // 			addressId: addressId
+    // 		});
+    // 	}
+
+    // 	var couponId = uni.getStorageSync('couponId');
+
+    // 	if (couponId) {
+    // 		this.setData({
+    // 			couponId: couponId
+    // 		});
+    // 	}
+    // 	this.getCheckoutInfo();
+    // } catch (e) {
+    // 	console.log(e)
+    // 	// Do something when catch error
+    // }
+
+
+    // console.log(this.ticketInfo)
+    // console.log(this.isValidArr);
+  },
+
+  onShow: function onShow() {
+    var addressId = uni.getStorageSync('addressId');
+    if (addressId) {
+      this.setData({
+        addressId: addressId });
+
+    }
+
+    var couponId = uni.getStorageSync('couponId');
+    if (couponId) {
+      this.setData({
+        couponId: couponId });
+
+    }
+    this.getCheckoutInfo();
+    this.getCertificationInfo();
+  },
+
+
+  computed: {
+    // 总额
+    totalMoney: function totalMoney() {
+      var money = 0;
+      this.ticketInfo.guigeArr.forEach(function (item) {
+        // 单价*数量
+        money += item.retail_price * item.chooseCount;
+      });
+      return money;
+    } },
+
+  methods: {
+    getCertificationInfo: function getCertificationInfo() {
+      var guiGeArr = this.ticketInfo.guigeArr;
+      var filterArr = [];
+
+      guiGeArr.forEach(function (item) {
+        if (item.chooseCount > 0 && item.goods_number > 0) {
+          for (var i = item.chooseCount; i > 0; i--) {
+            filterArr.push(item);
+          }
+        }
+        // return item.chooseCount > 0 && item.goods_number > 0
+      });
+      this.certificationInfo = filterArr.map(function (item) {
+        return {
+          ticketTime: item.ticketTime,
+          guiGe: item.guiGe,
+          name: "",
+          card: "",
+          cardImgFront: "",
+          cardImgBehind: "",
+          cardImgElectron: "" };
+
+      });
+    },
+    indexToNumber: function indexToNumber(index) {
+      switch (index + 1) {
+        case 1:
+          return '①';
+          break;
+        case 2:
+          return '②';
+          break;
+        case 3:
+          return '③';
+          break;
+        case 4:
+          return '④';
+          break;
+        case 5:
+          return '⑤';
+          break;
+        case 6:
+          return '⑥';
+          break;
+        case 7:
+          return '⑦';
+          break;
+        case 8:
+          return '⑧';
+          break;
+        case 9:
+          return '⑨';
+          break;
+        case 10:
+          return '⑩';
+          break;
+        default:
+          return index;
+          break;}
+
+    },
+    onCardImgElectron: function onCardImgElectron(index) {
+      var item = this.certificationInfo[index];
+      uni.chooseImage({
+        count: 1,
+        sizeType: ["original", "compressed"], //可以指定是原图还是压缩图，默认二者都有
+        sourceType: ["album", "camera"], //从相册选择
+        success: function success(res) {
+          var tempFilePaths = res.tempFilePaths;
+          item.cardImgElectron = tempFilePaths;
+          uni.showLoading({
+            title: "正在上传...",
+            mask: true });
+
+
+          // 获取七牛token
+          var uptoken = '';
+          _util.default.request('https://beijing.biubbmk.cn/airshow/api/user/uptoken').then(function (response) {
+            // console.log(res)
+            uptoken = response.uptoken;
+
+            var img = res.tempFilePaths[0]; //拿到里面的
+            //下面的key是自己拿时间戳和随机数组成的key值
+            var key = new Date().getTime();
+            uni.uploadFile({
+              url: "https://up-z2.qiniup.com", //华南地区上传
+              filePath: img,
+              name: 'file',
+              method: "POST",
+              formData: {
+                'key': key, //key值
+                'token': uptoken //七牛云token值
+              },
+              success: function success(uploadFileRes) {
+                //uploadFileRes 返回了data是一个json字符串 
+                //拿到里面的key拼接上域名，再反出去就ok了
+                var strToObj = JSON.parse(uploadFileRes.data),
+                backUrl =
+                'http://rnwwnc95c.hn-bkt.clouddn.com/' +
+                strToObj.key;
+                console.log(backUrl);
+                item.cardImgElectron = backUrl;
+                // data.success(backUrl); //反出去链接
+                uni.hideLoading();
+              },
+              fail: function fail(_fail) {
+                uni.showToast({
+                  title: "网络错误",
+                  icon: "none" });
+
+                console.log(_fail);
+                // data.fail(fail); //反出去错误信息
+                uni.hideLoading();
+              } });
+
+          });
+          // return;
+
+        } });
+
+    },
+    previewCardImgElectron: function previewCardImgElectron(index) {
+      var item = this.certificationInfo[index];
+      uni.previewImage({
+        current: 1,
+        urls: item.cardImgElectron,
+        success: function success(res) {
+          console.log(res);
+        },
+        fail: function fail(err) {
+          console.log(err);
+        } });
+
+    },
+
+    previewCardImgFront: function previewCardImgFront(index) {
+      var item = this.certificationInfo[index];
+      uni.previewImage({
+        current: 1,
+        urls: item.cardImgFront,
+        success: function success(res) {
+          console.log(res);
+        },
+        fail: function fail(err) {
+          console.log(err);
+        } });
+
+    },
+    onCardImgFront: function onCardImgFront(index) {
+      var item = this.certificationInfo[index];
+      uni.chooseImage({
+        count: 1,
+        sizeType: ["original", "compressed"], //可以指定是原图还是压缩图，默认二者都有
+        sourceType: ["album", "camera"], //从相册选择
+        success: function success(res) {
+          var tempFilePaths = res.tempFilePaths;
+          item.cardImgFront = tempFilePaths;
+          console.log(tempFilePaths);
+          // this.setData({
+          // 	[`certificationInfo[${index}].cardImgFront`]: tempFilePaths
+          // })
+          uni.showLoading({
+            title: "正在上传...",
+            mask: true });
+
+
+          // 获取七牛token
+          var uptoken = '';
+          _util.default.request(_api.default.uploadImg).then(function (response) {
+            // console.log(res)
+            uptoken = response.uptoken;
+
+            var img = res.tempFilePaths[0]; //拿到里面的
+            //下面的key是自己拿时间戳和随机数组成的key值
+            var key = new Date().getTime();
+            uni.uploadFile({
+              url: _api.default.qiniuyunUrl, //华南地区上传
+              filePath: img,
+              name: 'file',
+              method: "POST",
+              formData: {
+                'key': key, //key值
+                'token': uptoken //七牛云token值
+              },
+              success: function success(uploadFileRes) {
+                //uploadFileRes 返回了data是一个json字符串 
+                //拿到里面的key拼接上域名，再反出去就ok了
+                var strToObj = JSON.parse(uploadFileRes.data);
+                var backUrl = _api.default.qiniuyunBackUrl + strToObj.key;
+                console.log(backUrl);
+                item.cardImgFront = backUrl;
+                // data.success(backUrl); //反出去链接
+                uni.hideLoading();
+              },
+              fail: function fail(_fail2) {
+                uni.showToast({
+                  title: "网络错误",
+                  icon: "none" });
+
+                console.log(_fail2);
+                // data.fail(fail); //反出去错误信息
+                uni.hideLoading();
+              } });
+
+          });
+          // return;
+        } });
+
+    },
+    previewCardImgBehind: function previewCardImgBehind(index) {
+      var item = this.certificationInfo[index];
+      uni.previewImage({
+        current: 1,
+        urls: item.CardImgBehind });
+
+    },
+    onCardImgBehind: function onCardImgBehind(index) {
+      var item = this.certificationInfo[index];
+      uni.chooseImage({
+        count: 1,
+        sizeType: ["original", "compressed"], //可以指定是原图还是压缩图，默认二者都有
+        sourceType: ["album", "camera"], //从相册选择
+        success: function success(res) {
+          var tempFilePaths = res.tempFilePaths;
+          item.cardImgBehind = tempFilePaths;
+          uni.showLoading({
+            title: "正在上传...",
+            mask: true });
+
+
+          // 获取七牛token
+          var uptoken = '';
+          _util.default.request(_api.default.uploadImg).then(function (response) {
+            // console.log(res)
+            uptoken = response.uptoken;
+
+            var img = res.tempFilePaths[0]; //拿到里面的
+            //下面的key是自己拿时间戳和随机数组成的key值
+            var key = new Date().getTime();
+            uni.uploadFile({
+              url: _api.default.qiniuyunUrl, //华南地区上传
+              filePath: img,
+              name: 'file',
+              method: "POST",
+              formData: {
+                'key': key, //key值
+                'token': uptoken //七牛云token值
+              },
+              success: function success(uploadFileRes) {
+                //uploadFileRes 返回了data是一个json字符串 
+                //拿到里面的key拼接上域名，再反出去就ok了
+                var strToObj = JSON.parse(uploadFileRes.data),
+                backUrl =
+                _api.default.qiniuyunBackUrl +
+                strToObj.key;
+                console.log(backUrl);
+                console.log(item.cardImgBehind);
+                item.cardImgBehind = backUrl;
+                // data.success(backUrl); //反出去链接
+                uni.hideLoading();
+              },
+              fail: function fail(_fail3) {
+                uni.showToast({
+                  title: "网络错误",
+                  icon: "none" });
+
+                console.log(_fail3);
+                // data.fail(fail); //反出去错误信息
+                uni.hideLoading();
+              } });
+
+          });
+          // return;
+
+
+        } });
+
+    },
+    onTypeInvoices: function onTypeInvoices(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.invoices.type = value;
+    },
+    onNameInvoices: function onNameInvoices(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.invoices.name = value;
+    },
+    onTaxInvoices: function onTaxInvoices(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.invoices.tax_number = value;
+    },
+    validTax_Invoices: function validTax_Invoices() {
+      var tax_number = this.invoices.tax_number;
+      this.isValidTax = !_util.default.checkTax(tax_number);
+    },
+    getCheckoutInfo: function getCheckoutInfo() {
+      var that = this;
+      console.log(that.addressId, that.couponId);
+      _util.default.request(_api.default.CartCheckout, {
+        addressId: that.addressId,
+        couponId: that.couponId }).
+      then(function (res) {
+        if (res.errno === 0) {
+          console.log(res.data);
+          that.setData({
+            // checkedGoodsList: res.data.checkedGoodsList,
+            checkedAddress: res.data.checkedAddress
+            // actualPrice: res.data.actualPrice,
+            // checkedCoupon: res.data.checkedCoupon,
+            // couponList: res.data.couponList,
+            // couponPrice: res.data.couponPrice,
+            // freightPrice: res.data.freightPrice,
+            // goodsTotalPrice: res.data.goodsTotalPrice,
+            // orderTotalPrice: res.data.orderTotalPrice
+          });
+        }
+
+        uni.hideLoading();
+      });
+    },
+    selectAddress: function selectAddress() {
+      uni.navigateTo({
+        url: '/pages/shopping/address/address' });
+
+    },
+    addAddress: function addAddress() {
+      uni.navigateTo({
+        url: '/pages/shopping/addressAdd/addressAdd' });
+
+    },
+    getIsValidArr: function getIsValidArr() {
+      this.isValidArr = this.certificationInfo.map(function (item) {return item = false;});
+    },
+    // 校验身份证
+    validCard: function validCard(index) {
+      var card = this.certificationInfo[index].card;
+
+      var id =
+      /^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/;
+
+      if (!id.test(card)) {
+        this.$set(this.isValidArr, index, true);
+      }
+      if (id.test(card)) {
+        this.$set(this.isValidArr, index, false);
+      }
+    },
+
+    validPhone: function validPhone() {
+      var phone = this.contactInfo.phone;
+      this.isValidPhone = !/^1[3|4|5|6|7|8|9][0-9]\d{8}$/.test(phone);
+    },
+    // 联系信息
+    onName: function onName(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.contactInfo.name = value;
+    },
+    onPhone: function onPhone(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.contactInfo.phone = value;
+    },
+    // 证件信息
+    onCertiName: function onCertiName(e) {var
+
+
+      value =
+
+
+
+
+
+
+      e.detail.value,i = e.currentTarget.dataset.i;
+      // console.log(e)
+      this.certificationInfo[i].name = value;
+    },
+    onCertiCard: function onCertiCard(e) {var
+
+
+      value =
+
+
+
+
+
+
+      e.detail.value,i = e.currentTarget.dataset.i;
+      // console.log(e);
+      this.certificationInfo[i].card = value;
+    },
+    // 邮寄地址
+    onAdress: function onAdress(e) {var
+
+
+      value =
+
+      e.detail.value;
+      this.adressInfo.adress = value;
+    },
+
+    onJieShow: function onJieShow(e) {
+      var value = e.detail.value;
+      if (value.length > 0) {
+        this.isJieShow = true;
+      } else {
+        this.isJieShow = false;
+      }
+
+      console.log(this.isJieShow);
+    },
+
+
+
+    // tagTap() {
+    // 	this.$refs.ddmTag.show()
+    // 	this.tagShow = true;
+    // },
+    // tagItemClick(e) {
+    // 	console.log(e)
+    // 	this.tag = e.text
+    // 	this.tagClose()
+    // },
+    // tagClose() {
+    // 	this.tagShow = false;
+    // },
+
+
+    // 是否稍后填写证件
+    needCertification: function needCertification() {
+      this.isNeedCertification = !this.isNeedCertification;
+    },
+    // 是否需要发票
+    needTicket: function needTicket() {
+      this.isNeedTicket = !this.isNeedTicket;
+    },
+
+    imageUrl: function imageUrl(isDui) {
+      return isDui ? '/static/images/buy/dui-2.png' : '/static/images/buy/dui.png';
+    },
+
+    showPopup: function showPopup() {
+      this.isShowXY = true;
+    },
+
+    closePopup: function closePopup() {
+      this.isShowXY = false;
+    },
+
+    buy: function buy() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var guigeArr, isWeekend, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                uni.showLoading();
+                // 校验表单
+                if (_this.isCheckedAllSpec()) {_context.next = 3;break;}return _context.abrupt("return");case 3:_context.prev = 3;_context.next = 6;return (
+
+
+
+
+
+                  _this.productDlete());case 6:_context.next = 8;return (
+
+                  _this.goodsClear());case 8:
+                // 加入购物车
+                guigeArr = _this.ticketInfo.guigeArr;
+                isWeekend = _this.isWeekend(_this.ticketInfo.choosetime);
+                guigeArr = guigeArr.filter(function (item) {return item.chooseCount;});
+                i = 0;case 12:if (!(i < guigeArr.length)) {_context.next = 18;break;}_context.next = 15;return (
+                  _this.addToCart(guigeArr[i], i, isWeekend));case 15:i++;_context.next = 12;break;case 18:
+
+                // 调起支付
+                _this.submitOrder();_context.next = 24;break;case 21:_context.prev = 21;_context.t0 = _context["catch"](3);
+
+                _util.default.showErrorToast(_context.t0.errMsg);case 24:case "end":return _context.stop();}}}, _callee, null, [[3, 21]]);}))();
+
+
+    },
+    isWeekend: function isWeekend(date) {
+      var dayOfWeek = new Date(date).getDay();
+      return dayOfWeek === 6 || dayOfWeek === 0;
+    },
+
+    // 校验
+    isCheckedAllSpec: function isCheckedAllSpec() {
+      var isValidPhone = this.isValidPhone;
+      var isValidArr = this.isValidArr;
+      var card = this.certificationInfo.map(function (item) {return item = item.card;});
+      var cardImgFront = this.certificationInfo.map(function (item) {return item = item.cardImgFront;});
+      var cardImgBehind = this.certificationInfo.map(function (item) {return item = item.cardImgBehind;});
+      var cardImgElectron = this.certificationInfo.map(function (item) {return item = item.cardImgElectron;});
+      var phone = this.contactInfo.phone;
+      var isJieShow = this.isJieShow;
+      var ticketInfo = this.ticketInfo;
+
+      // 如果还有表单未校验成功
+      if (
+      isValidPhone == true ||
+      isValidArr.indexOf(true) != -1 ||
+      card.filter(function (item) {return item.length == 0 ? true : false;}).length > 0 ||
+      phone.length == 0 ||
+      // 身份证图片上传
+
+      ticketInfo.zp == '专业日' && (
+
+      cardImgFront.filter(function (item) {return item.length == 0 ? true : false;}).length > 0 ||
+      cardImgBehind.filter(function (item) {return item.length == 0 ? true : false;}).length > 0 ||
+      cardImgElectron.filter(function (item) {return item.length == 0 ? true : false;}).length > 0))
+
+
+      {
+        uni.showToast({
+          image: '/static/static/images/icon_error.png',
+          title: '请填写完整',
+          mask: true });
+
+        return false;
+      }
+
+      console.log(isJieShow);
+
+      if (isJieShow == false) {
+        uni.showToast({
+          image: '/static/static/images/icon_error.png',
+          title: '请勾选协议',
+          mask: true });
+
+        return false;
+      }
+      return true;
+    },
+
+    // 加入购物车
+    addToCart: function addToCart(ticket, index, isWeekend) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+
+                _this2.certificationInfo[index]["choosetime"] = _this2.ticketInfo.choosetime;
+                console.log(_this2.certificationInfo[index]);_context2.next = 4;return (
+                  _util.default.request(
+                  _api.default.CartAdd, {
+                    goodsId: _this2.id,
+                    // 该票的张数
+                    number: ticket.chooseCount,
+                    // 该票的id
+                    productId: ticket.id,
+                    // category_id??
+                    category_id: _this2.category_id,
+                    certification: JSON.stringify([_this2.certificationInfo[index]]),
+                    isWeekend: isWeekend },
+
+                  'POST').
+                  then(function (res) {
+                    var _res = res;
+
+                    if (_res.errno == 0) {} else {
+                      uni.showToast({
+                        image: '/static/static/images/icon_error.png',
+                        title: _res.errmsg,
+                        mask: true });
+
+                    }
+                  }));case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
+
+    // 购物车置空
+    goodsClear: function goodsClear() {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+                  _util.default.request(
+                  _api.default.goodsClear, {},
+                  'GET'));case 2:case "end":return _context3.stop();}}}, _callee3);}))();
+
+    },
+
+    // 删除购物车中的票类商品
+    productDlete: function productDlete() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
+                  _util.default.request(
+                  _api.default.productDlete, {
+                    goods_id: _this3.id },
+
+                  'POST'));case 2:case "end":return _context4.stop();}}}, _callee4);}))();
+
+    },
+
+    // 调起支付
+    submitOrder: function submitOrder() {
+      // if (this.addressId <= 0) {
+      // 	util.showErrorToast('请选择收货地址');
+      // 	return false;
+      // }
+
+      _util.default.request(
+      _api.default.OrderSubmit, {
+        addressId: this.addressId,
+        couponId: this.couponId,
+        // category_id??
+        category_id: this.category_id,
+        // 是否需要地址
+        isNoNeedAddress: this.ticketInfo.ticketType == '电子票' ? true : false,
+        // 联系信息
+        name: this.contactInfo.name,
+        phone: this.contactInfo.phone,
+        // 证件信息
+        // certification: JSON.stringify(this.certificationInfo),
+        // 需要发票
+        isNeedTicket: this.isNeedTicket,
+        // 发票信息
+        invoices: JSON.stringify(this.invoices) },
+
+      'POST').
+      then(function (res) {
+        if (res.errno === 0) {
+          var orderId = res.data.orderInfo.id;
+          _pay.default.payOrder(parseInt(orderId)).
+          then(function (res) {
+            uni.redirectTo({
+              url: '/pages/payResult/payResult?status=1&orderId=' +
+              orderId });
+
+          }).
+          catch(function (res) {
+            uni.redirectTo({
+              url: '/pages/payResult/payResult?status=0&orderId=' +
+              orderId });
+
+          });
+        } else {
+          _util.default.showErrorToast('下单失败');
+        }
+      }).catch(function (err) {
+        _util.default.showErrorToast('下单失败');
+      });
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 218:
+/*!********************************************************************************************************!*\
+  !*** /Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/postcss-loader/src??ref--6-oneOf-1-3!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./buy.vue?vue&type=style&index=0&lang=css& */ 219);
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_stylePostLoader_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_oneOf_1_2_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_style_js_buy_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ 219:
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/macbook/Downloads/airttcket-front-main/pages/buy/buy.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+    if(false) { var cssReload; }
+  
+
+/***/ })
+
+},[[209,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/buy/buy.js.map
