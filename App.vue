@@ -9,22 +9,24 @@
 		onLaunch: function() {
 			/*#ifdef H5*/
 			var iswx = this.isWx()
-			if (iswx && !uni.getStorageSync('token')) {
-				var code = this.getUrlParam('code'); // 截取路径中的code，如果没有就去微信授权，如果已经获取到了就直接传code给后台获取openId
-				var local = encodeURIComponent(
-					'https://static-mp-81d04c4e-5e21-4d71-9c75-68782e3aaed9.next.bspapp.com/#/pages/ucenter/index/index'
-				);
-				let appid = 'wxb316fcad56ffb1ce';
-
-
-				if (code == null || code === '') {
-					window.location.href =
-						'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' +
-						local + '&response_type=code&scope=snsapi_base&connect_redirect=1&state=#wechat_redirect';
-				} else {
-					this.getOpenId(code, {}); //把code传给后台获取用户信息
-				}
+	
+		if (iswx) {
+			var code = this.getUrlParam('code'); // 截取路径中的code，如果没有就去微信授权，如果已经获取到了就直接传code给后台获取openId
+			var local = encodeURIComponent(
+				window.location.href
+			);
+			let appid = 'wx7fe2ba6679e645d2';
+		
+		
+			if (code == null || code === '') {
+				window.location.href =
+					'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' +
+					local + '&response_type=code&scope=snsapi_base&connect_redirect=1&state=#wechat_redirect';
+			} else {
+				this.getOpenId(code, {}); //把code传给后台获取用户信息
 			}
+		
+		}
 
 			// 添加全局路由守卫
 			if (!iswx) {
