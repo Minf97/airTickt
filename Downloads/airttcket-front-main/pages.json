@@ -263,10 +263,14 @@
 		"downloadFile": 10000
 	},
 	"debug": true,
+
 	"globalStyle": {
 		"backgroundTextStyle": "dark",
 		"navigationBarBackgroundColor": "#fff",
 		"navigationBarTitleText": "航展门票",
+		/*#ifdef H5*/
+		"navigationStyle": "custom",
+		/*#endif*/
 		"navigationBarTextStyle": "black",
 		"enablePullDownRefresh": true
 	},
