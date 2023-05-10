@@ -1,1 +1,0 @@
-<view class="{{['data-v-6199688e',(hidden)?'fui-form__field':'']}}"><slot></slot></view>

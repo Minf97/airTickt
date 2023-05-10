@@ -310,6 +310,7 @@
 					name: "",
 					tax_number: ""
 				},
+				certificationInfo: [],
 
 				// 
 				isNeedCertification: 0,
@@ -382,40 +383,11 @@
 				});
 			}
 			this.getCheckoutInfo();
+			this.getCertificationInfo();
 		},
 
 
 		computed: {
-
-			// 证件信息
-			certificationInfo() {
-				const guiGeArr = this.ticketInfo.guigeArr;
-				const filterArr = [];
-
-				guiGeArr.forEach(item => {
-
-					if (item.chooseCount > 0 && item.goods_number > 0) {
-						for (let i = item.chooseCount; i > 0; i--) {
-							filterArr.push(item);
-						}
-					}
-					// return item.chooseCount > 0 && item.goods_number > 0
-				})
-
-
-				return filterArr.map(item => {
-
-					return {
-						ticketTime: item.ticketTime,
-						guiGe: item.guiGe,
-						name: "",
-						card: "",
-						cardImgFront: "",
-						cardImgBehind: "",
-						cardImgElectron: ""
-					}
-				})
-			},
 			// 总额
 			totalMoney() {
 				let money = 0;
@@ -427,6 +399,30 @@
 			}
 		},
 		methods: {
+			getCertificationInfo() {
+				const guiGeArr = this.ticketInfo.guigeArr;
+				const filterArr = [];
+
+				guiGeArr.forEach(item => {
+					if (item.chooseCount > 0 && item.goods_number > 0) {
+						for (let i = item.chooseCount; i > 0; i--) {
+							filterArr.push(item);
+						}
+					}
+					// return item.chooseCount > 0 && item.goods_number > 0
+				})
+				this.certificationInfo = filterArr.map(item => {
+					return {
+						ticketTime: item.ticketTime,
+						guiGe: item.guiGe,
+						name: "",
+						card: "",
+						cardImgFront: "",
+						cardImgBehind: "",
+						cardImgElectron: ""
+					}
+				})
+			},
 			indexToNumber(index) {
 				switch (index + 1) {
 					case 1:
@@ -504,6 +500,7 @@
 										'http://rnwwnc95c.hn-bkt.clouddn.com/' +
 										strToObj.key;
 									console.log(backUrl)
+									item.cardImgElectron = backUrl;
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -559,6 +556,10 @@
 					success: res => {
 						const tempFilePaths = res.tempFilePaths;
 						item.cardImgFront = tempFilePaths;
+						console.log(tempFilePaths);
+						// this.setData({
+						// 	[`certificationInfo[${index}].cardImgFront`]: tempFilePaths
+						// })
 						uni.showLoading({
 							title: "正在上传...",
 							mask: true
@@ -585,11 +586,10 @@
 								success: uploadFileRes => {
 									//uploadFileRes 返回了data是一个json字符串 
 									//拿到里面的key拼接上域名，再反出去就ok了
-									let strToObj = JSON.parse(uploadFileRes.data),
-										backUrl =
-										api.qiniuyunBackUrl +
-										strToObj.key;
+									let strToObj = JSON.parse(uploadFileRes.data);
+									let backUrl = api.qiniuyunBackUrl + strToObj.key;
 									console.log(backUrl)
+									item.cardImgFront = backUrl;
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -611,6 +611,7 @@
 			previewCardImgBehind(index) {
 				const item = this.certificationInfo[index];
 				uni.previewImage({
+					current: 1,
 					urls: item.CardImgBehind
 				})
 			},
@@ -655,6 +656,7 @@
 										strToObj.key;
 									console.log(backUrl)
 									console.log(item.cardImgBehind)
+									item.cardImgBehind = backUrl;
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -817,13 +819,13 @@
 			},
 
 			onJieShow(e) {
-				const {
-					detail: {
-						value: [value]
-					}
-				} = e;
-				// console.log(e.detail)
-				this.isJieShow = value == "false" ? true : false;
+				const value = e.detail.value;
+				if (value.length > 0) {
+					this.isJieShow = true;
+				} else {
+					this.isJieShow = false;
+				}
+
 				console.log(this.isJieShow)
 			},
 

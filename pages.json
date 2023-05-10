@@ -1,19 +1,21 @@
 {
-	"pages": [
-		
-		{
+	"pages": [{
 			"path": "pages/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/guidance/guidance",
 			"style": {}
 		},
 		{
 			"path": "pages/buyNew/buyNew",
 			"style": {
 				"usingComponents": {
-	
+
 				}
 			}
 		},
-		
+
 		{
 			"path": "pages/catalog/catalog",
 			"style": {}
@@ -113,7 +115,7 @@
 			"path": "pages/buy/buy",
 			"style": {}
 		},
-		
+
 		{
 			"path": "pages/shopping/address/address",
 			"style": {}
@@ -261,10 +263,14 @@
 		"downloadFile": 10000
 	},
 	"debug": true,
+
 	"globalStyle": {
 		"backgroundTextStyle": "dark",
 		"navigationBarBackgroundColor": "#fff",
 		"navigationBarTitleText": "航展门票",
+		/*#ifdef H5*/
+		"navigationStyle": "custom",
+		/*#endif*/
 		"navigationBarTextStyle": "black",
 		"enablePullDownRefresh": true
 	},

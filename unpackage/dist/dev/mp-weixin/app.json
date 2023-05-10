@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/guidance/guidance",
     "pages/buyNew/buyNew",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",

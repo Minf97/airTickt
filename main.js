@@ -1,5 +1,9 @@
 import App from './App';
 
+
+
+Vue.config.productionTip = false
+
 // Api函数polyfill（目前为实验版本，如不需要，可删除！）';
 import Polyfill from './polyfill/polyfill';
 Polyfill.init();
@@ -15,18 +19,20 @@ Vue.mixin(Mixin);
 Vue.config.productionTip = false;
 App.mpType = 'app';
 const app = new Vue({
-    ...App
+	...App
 });
 app.$mount();
 // #endif
 
 // #ifdef VUE3
-import { createSSRApp } from 'vue';
+import {
+	createSSRApp
+} from 'vue';
 export function createApp() {
-    const app = createSSRApp(App);
-    app.mixin(Mixin);
-    return {
-        app
-    };
+	const app = createSSRApp(App);
+	app.mixin(Mixin);
+	return {
+		app
+	};
 }
 // #endif

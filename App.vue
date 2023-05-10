@@ -14,7 +14,7 @@
 				var local = encodeURIComponent(
 					'https://static-mp-81d04c4e-5e21-4d71-9c75-68782e3aaed9.next.bspapp.com/#/pages/ucenter/index/index'
 				);
-				let appid = 'wx7fe2ba6679e645d2';
+				let appid = 'wxb316fcad56ffb1ce';
 
 
 				if (code == null || code === '') {
@@ -24,7 +24,28 @@
 				} else {
 					this.getOpenId(code, {}); //把code传给后台获取用户信息
 				}
+			}
 
+			// 添加全局路由守卫
+			if (!iswx) {
+				uni.addInterceptor('navigateTo', {
+					invoke: (args) => {
+						// wx.showModal({
+						// 	title: "请在微信中打开~",
+						// })
+						console.log(111);
+						if (args.url != "/pages/guidance/guidance") {
+							console.log("ddd");
+							uni.navigateTo({
+								url: "/pages/guidance/guidance"
+							})
+							return false
+						} else {
+							return true
+						}
+						console.log(args);
+					},
+				})
 			}
 			/*#endif*/
 
@@ -70,7 +91,7 @@
 							return false;
 						} // 设置用户信息
 
-		
+
 						this.globalData.userInfo = res.data.userInfo;
 						this.globalData.token = res.data.token;
 						uni.setStorageSync('userInfo', JSON.stringify(res.data.userInfo));
@@ -87,10 +108,10 @@
 				return /micromessenger/.test(uAgent) ? true : false;
 			},
 			onWechatLogin(e) {
-		
+
 				util.login()
 					.then((res) => {
-								console.log(123)
+						console.log(123)
 						return util.request(
 							api.AuthLoginByWeixin, {
 								code: res,
@@ -109,7 +130,7 @@
 							return false;
 						} // 设置用户信息
 
-		
+
 						this.globalData.userInfo = res.data.userInfo;
 						this.globalData.token = res.data.token;
 						uni.setStorageSync('userInfo', JSON.stringify(res.data.userInfo));
