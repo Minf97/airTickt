@@ -290,7 +290,7 @@ var app = getApp();var _default =
     showTip: function showTip() {
       uni.showModal({
         title: "温馨提示",
-        content: "网页暂不支持，请在小程序中打开",
+        content: "\u7F51\u9875\u6682\u4E0D\u652F\u6301\uFF0C\u8BF7\u5728\"airshow\"\u5C0F\u7A0B\u5E8F\u4E2D\u6253\u5F00",
         showCancel: false });
 
     },

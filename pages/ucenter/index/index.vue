@@ -156,7 +156,7 @@
 			showTip() {
 				uni.showModal({
 					title: "温馨提示",
-					content: "网页暂不支持，请在小程序中打开",
+					content: `网页暂不支持，请在"airshow"小程序中打开`,
 					showCancel: false
 				})
 			},
