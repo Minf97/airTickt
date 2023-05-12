@@ -42,7 +42,7 @@
 						<view class="ttp">{{tempItem.guiGeInfo[0].guiGe}}</view>
 						<view class="tttipp">{{goods.goods_desc}}</view>
 					</view>
-					<view class="pricep">￥{{ price || goods.retail_price}}</view>
+					<view class="pricep">￥{{ goods.retail_price}}</view>
 				</view>
 				<!-- 购票数量 -->
 				<view class="bb" style="border-bottom: none;">
@@ -371,7 +371,7 @@
 			},
 			// 总额
 			totalMoney() {
-				return this.price * this.ticketCount;
+				return this.goods.retail_price * this.ticketCount;
 			}
 		},
 		methods: {
@@ -520,6 +520,7 @@
 							userHasCollect: res.data.userHasCollect,
 						});
 
+
 						var tempItem = {};
 						// 如果有itemid，就去productlist里找
 						if (that?.itemId) {
@@ -658,9 +659,9 @@
 					let obj = {};
 					console.log(233)
 					if (this.isWeekend(new Date())) {
-						that.price = item.weekend_price
+						this.goods.retail_price = item.weekend_price;
 					} else {
-						that.price = item.retail_price
+						this.goods.retail_price = item.retail_price
 					}
 					console.log(that.price, 233)
 					// 对数组遍历寻找到对应的数据

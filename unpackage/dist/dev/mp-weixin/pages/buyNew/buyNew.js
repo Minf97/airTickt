@@ -543,7 +543,7 @@ var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./uploadImg.js *
     },
     // 总额
     totalMoney: function totalMoney() {
-      return this.price * this.ticketCount;
+      return this.goods.retail_price * this.ticketCount;
     } },
 
   methods: {
@@ -692,6 +692,7 @@ var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./uploadImg.js *
             userHasCollect: res.data.userHasCollect });
 
 
+
           var tempItem = {};
           // 如果有itemid，就去productlist里找
           if (that === null || that === void 0 ? void 0 : that.itemId) {
@@ -830,9 +831,9 @@ var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./uploadImg.js *
         var obj = {};
         console.log(233);
         if (_this.isWeekend(new Date())) {
-          that.price = item.weekend_price;
+          _this.goods.retail_price = item.weekend_price;
         } else {
-          that.price = item.retail_price;
+          _this.goods.retail_price = item.retail_price;
         }
         console.log(that.price, 233);
         // 对数组遍历寻找到对应的数据
