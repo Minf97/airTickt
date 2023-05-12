@@ -74,8 +74,7 @@
 				</view>
 				<view class="cate-item">
 					<view class="b">
-						<navigator :class="'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')"
-							:url="(iitem.primary_product_id === 1006003 ? '/pages/goodsTicket/goodsTicket?id=' : '/pages/goods/goods?id=') + iitem.id"
+						<navigator :class="'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')" :url="getUrl(iitem)"
 							v-for="(iitem, iindex) in goodsList" :key="iindex">
 							<image class="img" :src="iitem.list_pic_url" background-size="cover"></image>
 
@@ -142,6 +141,15 @@
 			this.getSearchKeyword();
 		},
 		methods: {
+			getUrl(iitem) {
+				if (iitem.category_id == 1036009) {
+					return '../goodsTicket/goodsTicket?id=' + iitem.id
+				} else if (iitem.category_id == 1036012) {
+					return '../buyNew/buyNew?id=' + iitem.id
+				} else {
+					return '../goods/goods?id=' + iitem.id
+				}
+			},
 			//事件处理函数
 			closeSearch: function() {
 				uni.navigateBack();

@@ -233,6 +233,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 var util = __webpack_require__(/*! ../../../utils/util.js */ 9);
 
@@ -285,6 +287,13 @@ var app = getApp();var _default =
     // 页面关闭
   },
   methods: {
+    showTip: function showTip() {
+      uni.showModal({
+        title: "温馨提示",
+        content: "网页暂不支持，请在小程序中打开",
+        showCancel: false });
+
+    },
     loginWithWx: function loginWithWx() {
       if (!uni.getStorageSync('openid') || uni.getStorageSync('openid') == undefined) {
         this.getWxUserInfoCode();

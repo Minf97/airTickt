@@ -60,8 +60,10 @@
 					</navigator>
 				</view> -->
 				<view class="item" style="position: relative;">
+					<!-- #ifdef MP -->
 					<button type="default" open-type="contact" class="contactBtn"></button>
-					<navigator url="url" class="a">
+					<!-- #endif -->
+					<navigator url="url" @click="showTip" class="a">
 						<text class="icon kefu"></text>
 						<text class="txt">联系客服</text>
 					</navigator>
@@ -151,6 +153,13 @@
 			// 页面关闭
 		},
 		methods: {
+			showTip() {
+				uni.showModal({
+					title: "温馨提示",
+					content: "网页暂不支持，请在小程序中打开",
+					showCancel: false
+				})
+			},
 			loginWithWx: function() {
 				if (!uni.getStorageSync('openid') || uni.getStorageSync('openid') == undefined) {
 					this.getWxUserInfoCode();

@@ -158,6 +158,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 var util = __webpack_require__(/*! ../../utils/util.js */ 9);
 
@@ -225,6 +230,13 @@ var api = __webpack_require__(/*! ../../config/api.js */ 10);var _default =
     // 页面关闭
   },
   methods: {
+    showTip: function showTip() {
+      uni.showModal({
+        title: "温馨提示",
+        content: "\u7F51\u9875\u6682\u4E0D\u652F\u6301\uFF0C\u8BF7\u5728\"airshow\"\u5C0F\u7A0B\u5E8F\u4E2D\u6253\u5F00",
+        showCancel: false });
+
+    },
     getCategoryInfo: function getCategoryInfo() {
       var that = this;
       util.request(api.GoodsCategory, {

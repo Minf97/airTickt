@@ -16,7 +16,12 @@
 							mode="aspectFill">
 						</image>
 						<text class="name">联系客服</text>
+						<!-- #ifdef MP -->
 						<button type="default" open-type="contact" class="contactBtn"></button>
+						<!-- #endif -->
+						<!-- #ifdef H5 -->
+						<button type="default" @click="showTip" class="contactBtn"></button>
+						<!-- #endif -->
 					</view>
 				</view>
 			</view>
@@ -91,6 +96,13 @@
 			// 页面关闭
 		},
 		methods: {
+			showTip() {
+				uni.showModal({
+					title: "温馨提示",
+					content: `网页暂不支持，请在"airshow"小程序中打开`,
+					showCancel: false
+				})
+			},
 			getCategoryInfo: function() {
 				let that = this;
 				util.request(api.GoodsCategory, {

@@ -543,7 +543,7 @@ var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./uploadImg.js *
     },
     // 总额
     totalMoney: function totalMoney() {
-      return this.goods.retail_price * this.ticketCount;
+      return this.price * this.ticketCount;
     } },
 
   methods: {

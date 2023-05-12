@@ -371,7 +371,7 @@
 			},
 			// 总额
 			totalMoney() {
-				return this.goods.retail_price * this.ticketCount;
+				return this.price * this.ticketCount;
 			}
 		},
 		methods: {

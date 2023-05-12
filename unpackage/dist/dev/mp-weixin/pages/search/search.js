@@ -99,6 +99,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 =
+    _vm.searchStatus && _vm.goodsList.length
+      ? _vm.__map(_vm.goodsList, function(iitem, iindex) {
+          var $orig = _vm.__get_orig(iitem)
+
+          var m0 = _vm.getUrl(iitem)
+          return {
+            $orig: $orig,
+            m0: m0
+          }
+        })
+      : null
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -133,7 +153,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
 //
 //
 //
@@ -276,6 +295,15 @@ var app = getApp();var _default =
     this.getSearchKeyword();
   },
   methods: {
+    getUrl: function getUrl(iitem) {
+      if (iitem.category_id == 1036009) {
+        return '../goodsTicket/goodsTicket?id=' + iitem.id;
+      } else if (iitem.category_id == 1036012) {
+        return '../buyNew/buyNew?id=' + iitem.id;
+      } else {
+        return '../goods/goods?id=' + iitem.id;
+      }
+    },
     //事件处理函数
     closeSearch: function closeSearch() {
       uni.navigateBack();
