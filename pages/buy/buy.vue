@@ -107,6 +107,7 @@
 
 					<view class="inp zyr" v-if="ticketInfo.zp == '专业日'">
 						<view class="tit">身份证照片(上传正反面)</view>
+						<!-- {{JSON.stringify(certificationInfo)}} -->
 						<view class="imgBoxbox">
 							<view class="imgBox">
 								<image :src="item.cardImgFront" v-if="item.cardImgFront" mode="aspectFill" class="sfz"
@@ -339,6 +340,7 @@
 				id: id,
 				category_id: category_id
 			})
+			this.getCertificationInfo();
 			console.log(id, category_id)
 
 			// try {
@@ -383,7 +385,7 @@
 				});
 			}
 			this.getCheckoutInfo();
-			this.getCertificationInfo();
+
 		},
 
 
@@ -468,7 +470,6 @@
 					sourceType: ["album", "camera"], //从相册选择
 					success: res => {
 						const tempFilePaths = res.tempFilePaths;
-						item.cardImgElectron = tempFilePaths;
 						uni.showLoading({
 							title: "正在上传...",
 							mask: true
@@ -476,7 +477,7 @@
 
 						// 获取七牛token
 						let uptoken = '';
-						util.request('https://beijing.biubbmk.cn/airshow/api/user/uptoken').then(response => {
+						util.request(api.uploadImg).then(response => {
 							// console.log(res)
 							uptoken = response.uptoken;
 
@@ -484,7 +485,7 @@
 							//下面的key是自己拿时间戳和随机数组成的key值
 							let key = new Date().getTime();
 							uni.uploadFile({
-								url: "https://up-z2.qiniup.com", //华南地区上传
+								url: api.qiniuyunUrl, //华南地区上传
 								filePath: img,
 								name: 'file',
 								method: "POST",
@@ -497,10 +498,13 @@
 									//拿到里面的key拼接上域名，再反出去就ok了
 									let strToObj = JSON.parse(uploadFileRes.data),
 										backUrl =
-										'http://rnwwnc95c.hn-bkt.clouddn.com/' +
+										api.qiniuyunBackUrl +
 										strToObj.key;
 									console.log(backUrl)
 									item.cardImgElectron = backUrl;
+									this.setData({
+										[`certificationInfo[${index}]`]: item
+									})
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -524,7 +528,7 @@
 				const item = this.certificationInfo[index];
 				uni.previewImage({
 					current: 1,
-					urls: item.cardImgElectron,
+					urls: [item.cardImgElectron],
 					success: res => {
 						console.log(res)
 					},
@@ -538,7 +542,21 @@
 				const item = this.certificationInfo[index];
 				uni.previewImage({
 					current: 1,
-					urls: item.cardImgFront,
+					urls: [item.cardImgFront],
+					success: res => {
+						console.log(res)
+					},
+					fail: err => {
+						console.log(err)
+					}
+				})
+			},
+			previewCardImgBehind(index) {
+				const item = this.certificationInfo[index];
+				console.log(item);
+				uni.previewImage({
+					current: 1,
+					urls: [item.cardImgBehind],
 					success: res => {
 						console.log(res)
 					},
@@ -549,14 +567,13 @@
 			},
 			onCardImgFront(index) {
 				const item = this.certificationInfo[index];
+				console.log(item, index, 23333);
 				uni.chooseImage({
 					count: 1,
 					sizeType: ["original", "compressed"], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ["album", "camera"], //从相册选择
 					success: res => {
 						const tempFilePaths = res.tempFilePaths;
-						item.cardImgFront = tempFilePaths;
-						console.log(tempFilePaths);
 						// this.setData({
 						// 	[`certificationInfo[${index}].cardImgFront`]: tempFilePaths
 						// })
@@ -590,6 +607,10 @@
 									let backUrl = api.qiniuyunBackUrl + strToObj.key;
 									console.log(backUrl)
 									item.cardImgFront = backUrl;
+									this.setData({
+										[`certificationInfo[${index}]`]: item
+									})
+									console.log(this.certificationInfo, item);
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -608,13 +629,7 @@
 					}
 				})
 			},
-			previewCardImgBehind(index) {
-				const item = this.certificationInfo[index];
-				uni.previewImage({
-					current: 1,
-					urls: item.CardImgBehind
-				})
-			},
+
 			onCardImgBehind(index) {
 				const item = this.certificationInfo[index];
 				uni.chooseImage({
@@ -623,7 +638,6 @@
 					sourceType: ["album", "camera"], //从相册选择
 					success: res => {
 						const tempFilePaths = res.tempFilePaths;
-						item.cardImgBehind = tempFilePaths;
 						uni.showLoading({
 							title: "正在上传...",
 							mask: true
@@ -657,6 +671,9 @@
 									console.log(backUrl)
 									console.log(item.cardImgBehind)
 									item.cardImgBehind = backUrl;
+									this.setData({
+										[`certificationInfo[${index}]`]: item
+									})
 									// data.success(backUrl); //反出去链接
 									uni.hideLoading();
 								},
@@ -737,7 +754,7 @@
 			},
 			addAddress() {
 				uni.navigateTo({
-					url: '/pages/shopping/addressAdd/addressAdd'
+					url: '/pages/shopping/address/address'
 				});
 			},
 			getIsValidArr() {

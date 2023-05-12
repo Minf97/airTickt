@@ -191,30 +191,10 @@
 		onLoad: function(options) {
 			const choosetime = options.choosetime;
 			// 页面初始化 options为页面跳转所带来的参数
-			try {
-				var addressId = uni.getStorageSync('addressId');
-
-				if (addressId) {
-					this.setData({
-						addressId: addressId
-					});
-				}
-
-				var couponId = uni.getStorageSync('couponId');
-
-				if (couponId) {
-					this.setData({
-						couponId: couponId
-					});
-				}
-				console.log(options)
-				this.setData({
-					category_id: Number(options.category_id),
-					choosetime: choosetime
-				})
-			} catch (e) {
-				// Do something when catch error
-			}
+			this.setData({
+				category_id: Number(options.category_id),
+				choosetime: choosetime
+			})
 		},
 		onReady: function() {
 			// 页面渲染完成
@@ -224,6 +204,22 @@
 			uni.showLoading({
 				title: '加载中...'
 			});
+			try {
+				var addressId = uni.getStorageSync('addressId');
+				if (addressId) {
+					this.setData({
+						addressId: addressId
+					});
+				}
+				var couponId = uni.getStorageSync('couponId');
+				if (couponId) {
+					this.setData({
+						couponId: couponId
+					});
+				}
+			} catch (e) {
+				// Do something when catch error
+			}
 			this.getCheckoutInfo();
 		},
 		onHide: function() {
@@ -318,7 +314,7 @@
 					couponId: that.couponId
 				}).then(function(res) {
 					if (res.errno === 0) {
-						console.log(res.data);
+						console.log(res.data.checkedAddress);
 						that.setData({
 							checkedGoodsList: res.data.checkedGoodsList,
 							checkedAddress: res.data.checkedAddress,
@@ -344,7 +340,7 @@
 
 			addAddress() {
 				uni.navigateTo({
-					url: '/pages/shopping/addressAdd/addressAdd'
+					url: '/pages/shopping/address/address'
 				});
 			},
 			// 判断是否是微信浏览器

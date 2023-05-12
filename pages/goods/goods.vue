@@ -142,7 +142,8 @@
 							</view>
 
 							<view v-if="item.name == '时间'">
-								<uni-calendar ref="calendar" :selected="timearr" :insert="false" @confirm="confirm" />
+								<uni-calendar ref="calendar" :selected="timearr" :insert="false" @close="closeCal"
+									@confirm="confirm" />
 								<view :class="'value ' + (chooseDate == '选择日期' ? '':'selected')"
 									:style="chooseId == 0 ? 'border: 1px solid #ccc;color:#ccc' : ''"
 									:data-value-id="vitem.id" :data-name-id="vitem.specification_id" @click="open">
@@ -163,7 +164,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="bottom-btn">
+		<view class="bottom-btn" :style="isShowFix ? 'bottom: 0rpx;' : 'bottom: -200rpx;'">
 			<view class="l l-collect" @tap="addCannelCollect">
 				<image class="icon" :src="collectBackImage"></image>
 			</view>
@@ -244,6 +245,9 @@
 				chooseId: 0,
 				ischoose: false,
 				timearr: [],
+
+
+				isShowFix: true
 			};
 		},
 		onLoad: function(options) {
@@ -325,6 +329,7 @@
 				// console.log(id, specificationList, result);
 				this.timearr = result;
 				this.$refs.calendar[0].open();
+				this.isShowFix = false;
 			},
 			naviTo() {
 				uni.navigateTo({
@@ -342,7 +347,8 @@
 				const chooseId = this.chooseId;
 				const buyText = this.buyText;
 
-				if ((chooseDate == '选择日期' || chooseId == 0) && buyText == '立即购买' && this.goods.category_id == 1036010) {
+				if ((chooseDate == '选择日期' || chooseId == 0) && buyText == '立即购买' && this.goods.category_id ==
+					1036010) {
 					uni.showToast({
 						title: '还没选择好噢',
 						icon: 'none',
@@ -390,7 +396,9 @@
 						// category_id??
 						category_id: this.goods.category_id,
 						isWeekend,
-						certification: JSON.stringify([{choosetime: this.chooseDate}])
+						certification: JSON.stringify([{
+							choosetime: this.chooseDate
+						}])
 					},
 					'POST'
 				).then(res => {
@@ -440,7 +448,7 @@
 						// category_id??
 						category_id: this.category_id,
 						// 是否需要地址
-						isNoNeedAddress: this.ticketInfo.ticketType == '电子票' ? true : false,
+						isNoNeedAddress: true,
 						// 联系信息
 						name: this.contactInfo.name,
 						phone: this.contactInfo.phone,
@@ -492,11 +500,16 @@
 				// console.log(result);
 
 			},
+			closeCal(e) {
+				console.log(e, 2333);
+				this.isShowFix = true;
+			},
 			confirm(e) {
 				// clog
 				console.log(e.extraInfo, "什么情况");
 				console.log(this.timearr, "这里错了？");
 				this.chooseDate = e.fulldate;
+				this.isShowFix = true;
 				// this.retail_price = e.extraInfo.info.replace("￥", "");
 				const event = {
 					currentTarget: {

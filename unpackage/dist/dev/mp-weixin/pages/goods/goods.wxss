@@ -446,6 +446,7 @@
 	height: 100rpx;
 	display: flex;
 	background: #fff;
+	transition: all 0.5s;
 }
 .bottom-btn .l {
 	float: left;

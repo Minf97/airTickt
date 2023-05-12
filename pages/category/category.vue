@@ -15,8 +15,7 @@
 					<text class="desc">{{ currentCategory.front_name }}</text>
 				</view>
 				<view class="b">
-					<navigator :class="'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')"
-						:url="iitem.category_id == 1036009 ? '../goodsTicket/goodsTicket?id=' + iitem.id : '../goods/goods?id=' + iitem.id"
+					<navigator :class="'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')" :url="getUrl(iitem)"
 						v-for="(iitem, iindex) in goodsList" :key="iindex">
 						<image class="img" :src="iitem.list_pic_url" background-size="cover"></image>
 
@@ -97,6 +96,15 @@
 			// 页面关闭
 		},
 		methods: {
+			getUrl(iitem) {
+				if (iitem.category_id == 1036009) {
+					return '../goodsTicket/goodsTicket?id=' + iitem.id
+				} else if (iitem.category_id == 1036012) {
+					return '../buyNew/buyNew?id=' + iitem.id
+				} else {
+					return '../goods/goods?id=' + iitem.id
+				}
+			},
 			getCategoryInfo: function() {
 				let that = this;
 				util.request(api.GoodsCategory, {

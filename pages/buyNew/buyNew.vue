@@ -222,7 +222,9 @@
 				isShowDialog: false,
 				contentDialog: '',
 				productListNew: [{
-					guiGeInfo: [{		guiGe: ''}],
+					guiGeInfo: [{
+						guiGe: ''
+					}],
 				}],
 				tempItem: {
 					guiGeInfo: [{
@@ -1068,6 +1070,7 @@
 
 				util.request(
 					api.OrderSubmit, {
+						isNoNeedAddress: true,
 						addressId: this.addressId,
 						couponId: this.couponId,
 						// category_id??

@@ -26,7 +26,7 @@
 		data() {
 			return {
 				ifShow: true,
-				val: window.location.href, // 要生成的二维码值
+				val: window.location.origin + window.location.pathname, // 要生成的二维码值
 				size: 200, // 二维码大小
 				unit: 'upx', // 单位
 				background: '#f4f4f4', // 背景色
@@ -45,8 +45,9 @@
 		},
 		methods: {
 			setClipboard() {
+				console.log(window.location);
 				uni.setClipboardData({
-					data: window.location.href,
+					data: window.location.origin + window.location.pathname,
 					success: () => {
 						uni.showToast({
 							title: "复制成功",
